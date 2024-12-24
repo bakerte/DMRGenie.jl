@@ -3,6 +3,8 @@
 \documentclass{juliacon}
 \setcounter{page}{1}
 
+\usepackage{amsmath}
+
 \begin{document}
 
 \input{header}
@@ -11,530 +13,190 @@
 
 \begin{abstract}
 
-This is a guide for authors who are preparing papers for JuliaCon using the \LaTeX{} document
-preparation system and the \verb|juliacon|  class file.
+We discuss implementation of a graphical user interface for tensor operations in scientific simulations related to entanglement renormalization. This software, which we call DMRGenie, based on its heavy reliance on Genie which is a well-known software package for web applications. We also discuss implementation of the software onto the Digital Research Alliance for permanent web-hosting. Scientific simulations with tensor network-based framework of quantum algorithm methods is now possible through this tool without length start-up or learning times.
 
 \end{abstract}
+
 
 \section{Introduction}
 
-The \LaTeX{} document preparation system is a special version of the
-\TeX; typesetting program where-in a collection of \TeX; commands
-are added to \LaTeX{} to simplify typesetting. Importantly, it allows
-the author to concentrate on the logical structure of the document
-rather than its visual layout.\vskip 6pt
-Moreover, \LaTeX{} provides a consistent and comprehensive document
-preparation interface. There are simple-to-use commands for
-generating a table of contents, lists of figures and/or tables, and indexes.
-\LaTeX{} can automatically number list entries, equations, figures,
-tables, and footnotes, as well as articles, sections, and subsections.
-Using this numbering system, bibliographic citations, page
-references, and cross references to any other numbered entity (e.g.
-article, section, equation, figure, list entry, etc.) become quite simple
-and straightforward. The use of \LaTeX{} document classes allows
-a simple change of class to transform the appearance of your document.\vskip 6pt
-\LaTeX{} is a powerful tool for managing long and complex documents.
-In particular, partial processing enables long documents to
-be produced article by article without losing sequential information.
-The use of document classes allows a simple change of style
-(or style option) to transform the appearance of your document.
+On one hand, for ideas to be implemented into computer code, which creates a need for easy-to-use high-level languages that are easy to code. On the other hand, scientific programming often requires runs on large systems, implying that performance is a necessity. To accomplish this second demand, a low-level language is required to control as much as possible in an implementation of an algorithm. This split between needs for different programming projects is known as the two-language problem.
 
+The Julia programming language is a good if not great attempt to solve this two-language problem. By optimizing for loops, programs can be created in a rapid manner but still achieve performance on par with lower-level languages such as C++. 
 
+In any scientific endeavour, the need to use numerical techniques is highly necessary. And for new advances to be made, new methods must be able to be implemented into any given language to evolve beyond the state-of-the-art. For any algorithm development team, the need for custom software that displays as many solutions of the two-language problem is necessary, making Julia a strong option for use in algorithm development.
 
-\section{The JuliaCon Article Class}
-\label{sec:documentclass}
-%
-The juliacon class file preserves the standard LATEX{} interface such
-that any document that can be produced using the standard LATEX{}
-article class can also be produced with the class file.\vskip 6pt
-It is likely that the make up will change after file submission. For
-this reason, we ask you to ignore details such as slightly long lines,
-page stretching, or figures falling out of synchronization, as these
-details can be dealt with at a later stage.\vskip 6pt
-Use should be made of symbolic references (\verb|\ref| ) in order to
-protect against late changes of order, etc.
+Quantum information methods have become a tantalizing path to creating new algorithms and methods. These range from quantum algorithms implemented on quantum computers \cite{nielsen2010quantum} (but since no perfect quantum computer exist, simulations with classical methods are still required) to entanglement renormalization techniques.\footnote{This class of methods is more commonly referred to as tensor networks, simply, but with the rise of machine-learning and other methods particularly in quantum chemistry that are formulated on tensor networks, a distinguishing name is required. We choose to expand the usage of the term from Ref.~\cite{vidal2007entanglement} since all methods are fundamentally optimizing over quantities relevant for quantum information ({\it i.e.}, the entanglement) and renormalization was originally introduced to describe this class of methods \cite{wilson1983renormalization,krishna1980renormalization}. The methods required to implement an algorithm in this context is different from other contexts, notably machine learning.} 
 
-\section{USING THE JuliaCon Article CLASS FILE}
-
-If the file \verb|juliacon.cls|  is not already in the appropriate system directory
-for \LaTeX{} files, either arrange for it to be put there or copy
-it to your working directory. The \verb|juliacon|  document class is implemented
-as a complete class, not a document style option. In order to
-use the \verb|juliacon  document class, replace \verb|article|  by \verb|juliacon|  in the
-\verb|\documentclass|  command at the beginning of your document:
-\vskip 6pt
-\begin{centering}
-    \verb|\documentclass{article}|  \end{centering}
-\vskip 6pt
-replace by
-\vskip 6pt
- \verb|\documentclass{juliacon}|  \vskip 6pt
-In general, the following standard document \verb|style|  options should
-{ \itshape not} be used with the {\footnotesize \itshape article} class file:
-\begin{enumerate}
-\item[(1)] \verb|10pt|,  \verb|11pt|,  \verb|12pt|   ? unavailable;
-\item[(2)] \verb|twoside|  (no associated style file) ? \verb|twoside|  is the default;
-\item[(3)] \verb|fleqn|, \verb|leqno|, \verb|titlepage| ? should not be used;
-\end{enumerate}
-
-\section{Additional Document Style Options}
-\label{sec:additional_doc}
-%
-The following additional style option is available with the \verb|juliacon|  class file:
-\vskip 6pt
-Please place any additional command definitions at the very start of
-the \LaTeX{} file, before the \verb|\begin{document}|. For example, user-defined
-\verb|\def|  and \verb|\newcommand|   commands that define macros for
-technical expressions should be placed here. Other author-defined
-macros should be kept to a minimum.
-\vskip 6pt
-Commands that differ from the standard \LaTeX{} interface, or that
-are provided in addition to the standard interface, are explained in
-this guide. This guide is not a substitute for the \LaTeX{} manual itself.
-Authors planning to submit their papers in \LaTeX{} are advised to use
-\verb|juliacon.cls|  as early as possible in the creation of their files.
-
-%
-%
-%
-%
-\begin{table*}[t]
-\tabcolsep22pt
-\tbl{If necessary, the tables can be extended both columns.}{
-\begin{tabular}{|l|l|c|c|}\hline
-Label & \multicolumn{1}{c|}{Description}
-& Number of Users &
-Number of Queries\\\hline
-Test 1 & Training Data &
-\smash{\raise-7pt\hbox{70}} & 104\\
-\cline{1-2}\cline{4-4}
-Test 2 & Testing Data I & & 105\\\hline
-Test 3 & Testing Data II & 30 & 119\\\hline
-& Total & 100 & 328\\\hline
-\end{tabular}}
-\label{tab:symbols}
-\begin{tabnote}
-This is an example of table footnote.
-\end{tabnote}
-\end{table*}
-% \begin{figure*}[t]
-% \centerline{\includegraphics[width=11cm]{juliagraphs.png}}
-% \caption{If necessary, the images can be extended both columns.}
-%   \label{fig:sample_image}
-% \end{figure*}
-
-\section{Additional features}
-\label{sec:additional_faci}
-In addition to all the standard \LaTeX{} design elements, the \verb|juliacon|  class file includes the following features:
-In general, once you have used the additional \verb|juliacon.cls| facilities
-in your document, do not process it with a standard \LaTeX{} class
-file.
-
-\subsection{Titles, Author's Name, and Affiliation}
-\label{subsub:title_auth}
-The title of the article, author's name, and affiliation are used at the
-beginning of the article (for the main title). These can be produced
-using the following code:
-
-\begin{verbatim}
-\title{ This is an example of article title} }
-\author{
-   \large 1st Author \\[-3pt]
-   \normalsize 1st author's affiliation  \\[-3pt]
-    \normalsize 1st line of address \\[-3pt]
-    \normalsize 2nd line of address \\[-3pt]
-    \normalsize	1st author's email address \\[-3pt]
-  \and
-   \large 2nd Author \\[-3pt]
-   \normalsize 2nd author's affiliation  \\[-3pt]
-    \normalsize 1st line of address \\[-3pt]
-    \normalsize 2nd line of address \\[-3pt]
-    \normalsize	2nd author's email address \\[-3pt]
-\and
-   \large 3rd Author \\[-3pt]
-   \normalsize 3rd author's affiliation  \\[-3pt]
-    \normalsize 1st line of address \\[-3pt]
-    \normalsize 2nd line of address \\[-3pt]
-    \normalsize	3rd author's email address \\[-3pt]
-}
-\maketitle
-\end{verbatim}
-
-\subsection{Writing Julia code}
-
-A special environment is already defined for Julia code,
-built on top of \textit{listings} and \textit{jlcode}.
-
-\begin{verbatim}
-\begin{lstlisting}[
-    language = Julia, 
-    numbers=left, 
-    label={lst:exmplg}, 
-    caption={Example Code Block.}
-]
-using Plots
-
-x = -3.0:0.01:3.0
-y = rand(length(x))
-plot(x, y)
-\end{lstlisting}
-\end{verbatim}
-\begin{lstlisting}[
-    language = Julia, 
-    numbers=left, 
-    label={lst:exmplg}, 
-    caption={Example Code Block.}
-]
-using Plots
-
-x = -3.0:0.01:3.0
-y = rand(length(x))
-plot(x, y)
-\end{lstlisting}
-
-
-\subsection{Abstracts, Key words, term etc...}
-\label{subsub:abs_key_etc}
-
-At the beginning of your article, the title should be generated
-in the usual way using the \verb|\maketitle|  command. For genaral tem and keywords use
-\verb|\terms|,
-\verb|\keywords|  commands respectively. The abstract should be enclosed
-within an abstract environment, All these environment
-can be produced using the following code:
-\begin{verbatim}
-\terms{Experimentation, Human Factors}
-
-\keywords{Face animation, image-based modelling...}
-
-\begin{abstract}
-In this paper, we propose a new method for the
-systematic determination of the model's base of
-time varying delay system. This method based on
-the construction of the classification data related
-to the considered system. The number, the orders,
-the time delay and the parameters of the local
-models are generated automatically without any
-knowledge about the full operating range of the
-process. The parametric identification of the local
-models is realized by a new recursive algorithm for
-on line identification of systems with unknown time
-delay. The proposed algorithm allows simultaneous
-estimation of time delay and parameters of
-discrete-time systems. The effectiveness of
-the new method has been illustrated through
-simulation.
-\end{abstract}
-
-\end{verbatim}
-
-\section{Some guidelines}
-\label{sec:some_guide}
-The following notes may help you achieve the best effects with the
-\verb|juliacon|  class file.
-
-\subsection{Sections}
-\label{subsub:sections}
-\LaTeXe{}  provides four levels of section headings and they are all
-defined in the \verb|juliacon|  class file:
-\begin{itemize}
-\item \verb|\section|
-\item \verb|\subsection|
-\item \verb|\subsubsection|
-\item \verb|\paragraph|
-\end{itemize}
-Section headings are automatically converted to allcaps style.
-\subsection{Lists}
-\label{sec:lists}
-%
-The \verb|juliacon|   class file provides unnumbered lists using the
-\verb|unnumlist|  environment for example,
-
-\begin{unnumlist}
-\item First unnumbered item which has no label and is indented from the
-left margin.
-\item Second unnumbered item.
-\item Third unnumbered item.
-\end{unnumlist}
-The unnumbered list which has no label and is indented from the
-left margin. was produced by:
-\begin{verbatim}
-\begin{unnumlist}
-\item First unnumbered item...
-\item Second unnumbered item...
-\item Third unnumbered item...
-\end{unnumlist}
-\end{verbatim}
-
-The \verb|juliacon|  class file also provides hyphen list using the
-\verb|itemize|  environment for example,
-\begin{itemize}
-\item First unnumbered bulleted item which has no label and is indented
-from the left margin.
-\item Second unnumbered bulleted item.
-\item Third unnumbered bulleted item which has no label and is indented
-from the left margin.
-\end{itemize}
-was produced by:
-\begin{verbatim}
-\begin{itemize}
-\item First item...
-\item Second item...
-\item Third item...
-\end{itemize}
-\end{verbatim}
-
-Numbered list is also provided in acmtog class file using the
-enumerate environment for example,
-\begin{enumerate}
-\item The attenuated and diluted stellar radiation.
-\item Scattered radiation, and
-\item Reradiation from other grains.
-\end{enumerate}
-
-was produced by:
-\begin{verbatim}
-\begin{enumerate}
-\item The attenuated...
-\item Scattered radiation, and...
-\item Reradiation from other grains...
-\end{enumerate}
-\end{verbatim}
-\subsection{Illustrations (or figures)}
-\label{subsub:sec_Illus}
-The \verb|juliacon|  class file will cope with most of the positioning of
-your illustrations and you should not normally use the optional positional
-qualifiers on the \verb|figure|  environment that would override
-these decisions.
-\vskip 6pt
-
-%
-\begin{figure}[t]
-\centerline{\includegraphics[width=4cm]{juliagraphs.png}}
-\caption{This is example of the image in a column.}
-	\label{fig:sample_figure}
-\end{figure}
-
-The figure \ref{fig:sample_figure} is taken from the JuliaGraphs
-organization \footnote{https://github.com/JuliaGraphs}.
-
-Figure captions should be \emph{below} the figure itself, therefore the
-\verb|\caption|  command should appear after the figure or space left for
-an illustration. For example, Figure 1 is produced using the following
-commands:
-
-\begin{verbatim}
 \begin{figure}
-\centerline{\includegraphics[width=20pc]{Graphics.eps}}
-\caption{An example of the testing process for a
-binary tree. The globa null hypothesis is tested
-first at level $\alpha$ (a), and the level of
-individual variables is reached last (d). Note
-that individual hypotheses can be tested at
-level $\alpha/4$ and not $\alpha/8$ as one might
-expect at first.}
-\label{sample-figure_2}
+\includegraphics[width=\columnwidth]{diagram.png}
+\caption{Shown are diagrams for rank-1, 2, and 3 tensors. Each line signifies another index on the tensor.
+\label{diagram}
+}
 \end{figure}
-\end{verbatim}
-Figures can be resized using first and second argument of
-\verb|\includegraphics|   command. First argument is used for modifying
-figure height and the second argument is used for modifying
-figure width respectively.
-\vskip 6pt
-Cross-referencing of figures, tables, and numbered, displayed
-equations using the \verb|\label|  and \verb|\ref|   commands is encouraged.
-For example, in referencing Figure 1 above, we used
-\verb|Figure~\ref{sample-figure}|
 
- \subsection{Tables}
-\label{subsub:sec_Tab}
-The \verb|juliacon|   class file will cope with most of the positioning of
-your tables and you should not normally use the optional positional qualifiers on the table environment which would override these
-decisions. Table captions should be at the top.
-\begin{verbatim}
-\begin{table}
-\tbl{Tuning Set and Testing Set}{
-\begin{tabular}{|l|l|c|c|}\hline
-Label & \multicolumn{1}{c|}{Description}
-& Number of Users &
-Number of Queries\\\hline
-Train70 & Training Data &
-\smash{\raise-7pt\hbox{70}} & 104\\
-\cline{1-2}\cline{4-4}
-Test70 & Testing Data I & & 105\\\hline
-Test30 & Testing Data II & 30 & 119\\\hline
-& Total & 100 & 328\\\hline
-\end{tabular}}
-\end{table}
-\end{verbatim}
+Methods of entanglement renormalization use quantities native to quantum information ({\it i.e.}, the density matrix or the entropy) to optimize a a quantum problem to find solutions to the eigenvalue problem (Schr\"odinger's equation) \cite{townsend2000modern}. Entanglement renormalization techniques are formulated on a graph of tensors and have definite rules for tensor operations. Because tensor computations and operations can be cumbersome to represent mathematically in index notation, the field has adopted a diagram notation that allows for the improved communication of algorithms. Namely, the rank of the tensor corresponds to the number of lines on the diagram \cite{penrose1971angular}. An example is shown for rank-1, 2, and 3 tensors in Fig.~\ref{diagram}. 
 
-\begin{table}
-\tbl{Tuning Set and Testing Set}{
-\begin{tabular}{|l|l|c|c|}\hline
-Label & \multicolumn{1}{c|}{Description}
-& Number of Users &
-Number of Queries\\\hline
-Test 1 & Training Data &
-\smash{\raise-7pt\hbox{70}} & 104\\
-\cline{1-2}\cline{4-4}
-Test 2 & Testing Data I & & 105\\\hline
-Test 3 & Testing Data II & 30 & 119\\\hline
-& Total & 100 & 328\\\hline
-\end{tabular}}
-\end{table}
-\subsection{Landscaping Pages}
-\label{subsub:landscaping_pages}
-If a table is too wide to fit the standard measure, it may be turned,
-with its caption, to 90 degrees. Landscape tables cannot be produced
-directly using the \verb|juliacon|   class file because \TeX{} itself cannot
-turn the page, and not all device drivers provide such a facility.
-The following procedure can be used to produce such pages.
-\vskip 6pt
-Use the package \verb|rotating|   in your document and change the coding
-from
-\begin{verbatim}
-\begin{table}...\end{table}
-to
-\begin{sidewaystable}...\end{sidewaystable}
-and for figures
-\begin{figure}...\end{figure}
-to
-\begin{sidewaysfigure}...\end{sidewaysfigure}
-\end{verbatim}
+Realistically, only about a rank-14 tensor can be represented on a laptop machine since if the minimum dimension of each of the tensor indices is 2, then this is approaching the memory limitations on small computers, so the rank of the tensors represented here are small and often only a few indices are present.
 
-environments in your document to turn your table on the appropriate
-page of your document. For instance, the following code prints
-a page with the running head, a message half way down and the
-table number towards the bottom.
-\begin{verbatim}
-\begin{sidewaystable}
-\tbl{Landscape table caption to go here.}{...}
-\label{landtab}
-\end{sidewaystable}
-\end{verbatim}
+When contracting two tensors together, one can connect two indices on the same tensor ({\it i.e.}, tracing over indices) or between tensors (contraction). When representing a network of tensors, the indices are typically not kept track of. Instead, indices that points towards each other or have matching labels are taken to be contracted eventually. This rarely causes confusion when implementing algorithms.
 
-\subsection{Double Column Figure and Tables}
-\label{subsub:double_fig_tab}
-For generating the output of figures and tables in double column
-we can use the following coding:
+\begin{figure}
+\includegraphics[width=\columnwidth]{network.png}
+\caption{The expectation value of an operator $\hat H$ is shown in tensor diagram notation for a 6-site system. When contracted, this would give $\langle\hat H\rangle$, or the energy $E$ if $\hat H$ is the Hamiltonian. The wavefunction on the bottom row alone would be represented as in the text (Eq.~\ref{mpsform}), which is far more cumbersome.
+\label{network}
+}
+\end{figure}
 
-\begin{enumerate}
-\item For Figures:
-\begin{verbatim}
-\begin{figure*}...\end{figure*}
-\end{verbatim}
-\item For landscape figures:
-\begin{verbatim}
-\begin{sidewaysfigure*}...\end{sidewaysfigure*}
-\end{verbatim}
-\item For Tables:
-\begin{verbatim}
-\begin{table*}...\end{table*}
-\end{verbatim}
-\item For landscape tables:
-\begin{verbatim}
-\begin{sidewaystable*}...\end{sidewaystable*}
-\end{verbatim}
-\end{enumerate}
+The use of the diagram notation is useful for representing large numbers of tensors in a coherent way without representing cumbersom mathematics (see Fig.~\ref{network}). For example, the wavefunction when decomposed through a series of reshapes and singular value decompositions (SVD) takes the form \cite{bakerCJP21}
+\begin{align}\nonumber
+|\psi\rangle&=\sum_{\substack{\sigma_1\sigma_2\sigma_3\\\sigma_4\sigma_5\sigma_6}}\sum_{\substack{a_1a_2a_3\\a_4a_5}}A^{\sigma_1}_{a_1}A^{\sigma_2}_{a_1a_2}A^{\sigma_3}_{a_2a_3}A^{\sigma_4}_{a_3a_4}A^{\sigma_5}_{a_4a_5}A^{\sigma_6}_{a_5}\\
+&\quad\quad\quad\quad\quad\quad\quad\quad\times|\sigma_1\sigma_2\sigma_3\sigma_4\sigma_5\sigma_6\rangle
+\label{mpsform}
+\end{align}
+which is far more intricate than the diagram notation but conveys no extra information. Any quantum operator (for example, the Hamiltonian) can be decomposed into a similar site-by-site form involving many tensors.
 
-\subsection{Typesetting Mathematics}
-\label{subsub:type_math}
-The \verb|juliacon| class file will set displayed mathematics with center to
-the column width, provided that you use the \LaTeXe{} standard of
-open and closed square brackets as delimiters.
-The equation
-\[
-\sum_{i=1}^p \lambda_i = (S)
-\]
+Implementing algorithms from a purely diagrammatic level is a desired possibility, provided that a proper implementation of a graphical interface to implement steps in the implementation of the entanglement renormalization algorithms. It ultimately allows us to construct a simple graphical interface for computations without much code and without much math.
 
-was typeset using the acmtog class file with the commands
+Julia's solution of the two-level problem allows for an easy implementation of algorithms and simultaneous fast execution of scientific code. We discuss in this article efforts to construct a fully working scientific software package for entanglement renormalization that is simultaneously fast and lightweight. This software package was then extended to include a user interface that allows for the graphical construction of algorithms without any coding background, and this is our principle goal here.
 
-\begin{verbatim}
-\[
-\sum_{i=1}^p \lambda_i = (S)
-\]
-\end{verbatim}
+We will first discuss the background software (DMRjulia and TENPACK) originally developed in 2016 and first introduced to Github in 2020 and full debut on the Julia package environment in 2021. This means that the library has spanned many version of the Julia version starting originally in v0.5 and now continuing to v1.11 and beyond. We believe that some choices from our implementation may be interesting to the broader community, although many of the improvements that were introduced here later appeared in this development independently appeared in Julia from other groups, showing that many issues are being encountered in common and handled in similar ways.
 
-For display equations, cross-referencing is encouraged. For example,
-\begin{verbatim}
+DMRGenie is the natural extension of the previously developed software which we debut here. This builds on top of DMRjulia to include a graphical interface for easy development of new algorithms. This is hosted natively on a website and available for use with some limitations on the maximum size of the tensors to reduce server traffic \cite{dmrgenie}.
+
+\section{Entanglement renormalization with DMRjulia}
+
+DMRjulia is a software package in the Julia package environment that is 100\% written in the Julia programming language. This makes the software fast and light-weight, ultimately taking on a few kilobytes to install, and optimized to the point of being as fast as lower-level implementations of the same algorithms.
+
+The library implements several classes of tensor network anstaz to represent wavefunctions of quantum problems. This includes the matrix product state (MPS) \cite{verstraete2006matrix,baker2024bundled}, projected entangled pair states (PEPS) \cite{verstraete2004renormalization}, multiscale entanglement renormalization anstaz (MERA) \cite{vidal2007entanglement}, and classical tensor network algorithms such as the tensor renormalization group (TRG) \cite{levin2007tensor}. Each of these implementations is done with care towards ease of use, culminating in the DMRGenie implementation here.  All of these tensor networks are implemented in a fully flexible way.
+
+The algorithms can be accessed and coded in a variety of styles from the basic manipulation of tensors with four basic operations (reshaping, permuting tensors, contraction, decomposition) \cite{bakerCJP21,baker2019m,dmrjulia1}. Other operations such as joining tensor indices together (as a generalization of the direct sum operation on vectors or matrices) is also available. 
+
+We have also introduced a {\tt nametens} system to attach strings to each tensor index and formulate rules such that the {\tt *} operator is overloaded to find all common names and contract them.\footnote{Details on all functions in the library are available by typing {\tt ?} followed by the name of the function in the Julia terminal.} This provides another interface to develop algorithms that is useful in some cases.
+
+The implementation here for methods of entanglement renormalization is given as 100\% of Julia code with no dependencies beyond the basic library.\footnote{As of this article, the library is in an extended beta-testing phase. As we add more users, we are creating useful error checks for algorithms that can be created. The library will be moved to the alpha phase after this is complete, and we welcome feedback and development from anyone even if this phase has passed.}
+
+\section{Tensor algebra with TENPACK}
+
+As a quirk of the development of Julia, the issue of type stability was of paramount importance to ensure that any code developed in the language avoids generating too much overhead because of Julia's multiple dispatch capabilities. Because the compiler in Julia must assume that any possible input can be entered into a function, the assumptions of how types are converted and exactly what type is created can generate excess allocations which ultimately slow a program. Eliminating these excess allocations is necessary to create efficient code that is competitive with lower level languages.
+
+For example, when reshaping a tensor, the rank of the tensor changes. The implementation of the basic {\tt Array} type in Julia contains both the element data type and also the rank of the tensor. Because the rank of the tensor in entanglement renormalization methods, this naturally creates issues with the implementation of Julia's desire to reduce allocations for greater efficiency.
+
+A bridge between operations on tensors and the BLAS  functions that Julia calls was created as a stand-alone dependency (still 100\% written in Julia with no dependencies beyond the basic Julia implementation) called Tensor (Linear Algebra) Package (TENPACK) was created to interface between basic Julia and DMRjulia. This effectively replaces {\tt LinearAlgebra} and creates many functions with a similar name (and similar functionality) to {\tt LinearAlgebra} but for tensor inputs.
+
+The basic tensor type in TENPACK is the {\tt denstens} abstract type which has the {\tt tens} struct. This closely mirrors the definition of the {\tt Array} type in base Julia, but it only records the element type of the tensor. There are two fields for this struct: {\tt .size} (to store the current size of the tensor) and {\tt .T} field (storing the elements of the tensor as a vector, no matter the current shape). The {\tt .size} field contains a {\tt Memory} type that was recently introduced in v1.11. This means practically that this implementation will allow for better determination of the type when using these custom structs and throw allocations in some non-standard places ({\it i.e.}, when the size field is requested as a tuple, the {\tt Memory} in {\tt .size} is converted to a tuple generating one allocation). We find overall that the changes we imposed make for a faster implementation especially on smaller systems, although it is difficult to compare fully because it is merely a trade-off and makes compilation into an executable easier, particularly with the recently developed trimming feature to make executables far smaller than previous implementations.
+
+The design choices of TENPACK purposefully backtracks somewhat on the original promise of Julia in that mostly every function is fully typed for fixed inputs, so the code is not fully flexible and makes a stronger play for efficiency over flexibility. This can make the lowest levels of the library somewhat more difficult to maintain and manage with future feature improvements. However, we are able to run scalable simulations in this library that is created entirely in Julia.
+
+We also found it necessary to re-code some of the basic Julia functions into a form that natively admits the {\tt tens} type. Notably, the implementation of {\tt permutedims}, {\tt setindex}, and {\tt getindex} were coded to avoid issues when updating versions that sometimes caused type instabilities, although care is taken to ensure that these functions (and others such as {\tt svd}) are as efficient as the base Julia library). %avoid the use of the {\tt Cartesian} coordinates features. While these improvements are definitely a slick and universal implementation, we noticed that in some versions of Julia's release that there were some type stabilities generated by converting the {\tt tens} type to an {\tt Array} and then using the base Julia features. We therefore coded a more traditional implementation of these functions and noticed that the number of allocations throw is less by an order of magnitude for {\tt permutedims} and {\tt getindex}. For most permutes requested, {\tt permutedims} is also faster. We find {\tt getindex} is faster in almost every case. By making custom functions, this is also stable between versions of Julia.
+The goal when doing in this in the library is to always to match the performance and memory consumption of the basic Julia functions, but we want to ensure type-stability across versions. In some cases, a more rudimentary version of the function is used \cite{press1992numerical} or an alternative LAPACK function is called to ensure stability on the types of input tensors we provide.\footnote{For example, the basic implementation of {\tt svd} now uses {\tt LAPACK.gesdd!} (divide and conquer method) but this can return an error in some cases that we have noticed for our inputs. The {\tt svd} function in TENPACK natively calls {\tt LAPACK.gesvd!}. For the faster divide and conquer method, we have made a new function {\tt fsvd} (fast SVD, divide and conquer) and similar to still provide access to this and we do use this in some cases.}
+
+
+
+The original hope for Julia was to solve the two-language problem, and that is still largely solved in DMRjulia and TENPACK. We have merely made some compromise choices to ensure that there is efficient implementation because our use case is narrower than the most broad implementation that Julia strives to implement.
+
+%but some of these developments are not forwarding that goal at least for our purposes. We do not question the implementation in standard Julia functions as this kind of drift towards more specific functions and rewriting some basic functions was bound to happen for a more specific use case. We merely point out that some of these features are different for this library.
+
+
+\section{Graphical interface with DMRGenie}
+The DMRGenie graphical user interface (GUI) allows for tensor network algorithms to be run with minimal to no coding required, only diagrams. DMRGenie consists of the Algorithm Runner and the Tensor Network Builder. The Algorithm Runner runs tensor network algorithms such as DMRG using known models or custom Hamiltonians. The Tensor Network Builder allows the user to build their own tensor network and create their own tensor network algorithm using a drag-and-drop system. The frontend was built using HTML, JavaScript, React, and CSS for styling. The backend uses a Model View Controller (MVC) infrastructure. The packages used run the tensor network functions are DMRjulia and TENPACK. So, while both DMRjulia and TENPACK are 100\% from-scratch Julia implementations, DMRGenie is not, but this makes the code easier to use and work with and adapt to changing software standards in the future.
+
+\subsection{DMRGenie Backend}
+The DMRGenie website was built using a Model View Controller (MVC) infrastructure.  The benefit of a MVC framework is that the backend and frontend can be worked on simultaneously which allows for smoother development. The MVC was created using the Genie.jl Julia package. Genie was chosen because it allowed for full-stack development with Julia as the backend. With Julia as the backend, it is simple to run tensor network functions with DMRjulia and TENPACK. The model and controls are written in Julia while the view is written in Julia and HTML using a ".jl.html" file extension.
+
+The model is like an object that is passed between the frontend and the backend of the application. It is used to pass data between the two ends. When initializing the model, any variables to pass data are initialized to default values. The data returned by the model is mostly raw data.
+
+The view file contains the HTML for the application. This file is capable of containing Julia code due to its ".jl.html" file extension. This also allows the controller to pass Julia variables to be displayed or output on the frontend. Despite the allowance of Julia code being executed in the view component, Julia was only used to present the data rather than run computations.
+
+The controller is responsible for starting up the HTML page with the relevant data when website is initialized. When a tensor network is created or a tensor network function is run, the controller is responsible to create the tensors and run the algorithm using DMRjulia and TENPACK. The results of any operation are stored in variables and returned to the view component.
+
+
+\subsection{DMRGenie Frontend}
+The two main components of DMRGenie are the tensor network builder and the algorithm runner. The frontend of DMRGenie was built using HTML, CSS, and JavaScript along with ReactJS. The only ReactJS component of the app was the Tensor Network Builder. ReactJS was used along with ReactFlow which is a package meant for building node-based editors and interactive diagrams. 
+
+\subsection{Algorithm Runner}
+The Algorithm Runner is an interface that allows the user to build their own models or run known models to get the ground state energy of the system. The number of sites for a system and its Hamiltonian must be specified. The current supplied Hamiltonians are for the Hubbard model, the $t-J$ model, and the Heisenberg model \cite{fradkin2013field}. Custom Hamiltonians can be built by the user by specifying the physical dimension of the system, the Hamiltonian constant, and the components of the Hamiltonian.
+
+It is also possible to compute the correlations and impose symmetries on the system. The correlation matrix operators and correlation function operators must be specified to compute correlations. The matrix operators and function operators will then be evaluated at all position on the lattice. 
+
+Details of the symmetries and how they need to be implemented are included in Appendix~\ref{qsymmetries}.
+
+
+\subsection{Tensor Network Builder}
+The Tensor Network Builder is a drag and drop interface to build tensor networks. The rank of any tensor is specified before they are dropped onto the canvas. The number of connections points on a tensor is equal to the rank of the tensor. Indices can be created by dragging from a connection point on a tensor. It is possible to specify the name and dimension of all indices, and it is possible to rename an index if needed. Possible operations on tensors include contracting, singular value decompositions, eigenvalue decomposition, QR decompositions, and LQ decompositions. When the user is done the algorithm then the "submit" button can be clicked and the algorithm will be run on the backend. For more information about the backend, see the "Backend" section. The output of the algorithm will be the tensors that resulted from the last operation. The output is given as a downloadable file.\\
+
+ReactJS is used for the tensor network builder because of component reusability and the fast rendering. Many components can be reused because all the tensors and indices objects are reused. The ReactFlow package was designed to build node-based editors and interactive diagrams; however, graphs in computer science have similar structures to tensor networks. The nodes and edges in ReactFlow were generalized to tensors and indices. 
+
+\section{Deployment}
+%-uses resources supplied by the Research Computing services at the Unviersity of Victoria\\
+
+The application is packaged into a Docker container using GenieDeployDocker and Docker tools.  The container image is then pushed to a local image registry and scanned for vulnerabilities before deployment to a Kubernetes cluster, where it is made available on the web.  The registry,  cluster and web access are components of a self-serve application deployment platform.
+
+\section{Conclusion}
+
+A graphical user interface for entanglement renormalization has been presented here in DMRGenie. This builds upon the previous DMRjulia and TENPACK packages to make coding novel quantum algorithms far easier and more visual. 
+
+\section{Installation and usage}
+
+In order to obtain the basic library for DMRjulia and TENPACK, these can be obtained by an online repository \cite{dmrjulia,tenpack} or from the Julia package environment:
+\begin{lstlisting}[language = Julia]
+julia> ]
+pkg> add DMRJtensor TensorPACK
+\end{lstlisting}
+
+The DMRGenie GUI can be used online \cite{dmrgenie}.
+
+\section{Acknowledgement}
+
+K.G.~acknowledges support from the Valerie Kuehne Undergraduate Research Award, the Undergraduate Student Research Award (USRA) from NSERC, and the Summer Emerging Undergraduate Award (SERA) from the Faculty of Science at the University of Victoria. 
+
+A.D.~acknowledges support from the Undergraduate Student Research Award (USRA) from NSERC
+
+K.G. and A.D.~acknowledge the NSERC CREATE in Quantum Computing Program, grant number 543245.
+
+K.G. and A.D.~acknowledge the Jamie Cassel's Undergraduate Research Award (JCURA).
+
+This research was undertaken, in part, thanks to funding from the Canada Research Chairs Program. The Chair position in the area of Quantum Computing for Modelling of Molecules and Materials is hosted by the Departments of Physics \& Astronomy and of Chemistry at the University of Victoria. 
+
+This work has been supported in part by the Natural Sciences and Engineering Research Council of Canada (NSERC) under grants RGPIN-2023-05510 and DGECR-2023-00026, and ALL-RP 590857-23.
+
+This research was enabled--in part--by support and resources provided by the Research Support Services at the University of Victoria.
+
+This work was supported by the Digital Research Alliance of Canada.
+
+\begin{appendix}
+
+\section{Use and implementation of quantum symmetries}
+\label{qsymmetries}
+
+TENPACK currently supports local $U(1)$ and $\mathbb{Z}_n$ symmetries. The basic idea is to establish the relevant quantum numbers on each physical index (drawn as the vertical index on the MPS). Specifying the quantum numbers on each of the physical indices is sufficient to determine the quantum numbers on all other indices, provided that the total flux of the input Hamiltonian is a net zero ({\it i.e.}, symmetry-preserving Hamiltonian). Given this case, all tensor exhibit a block structure, where each block has a set of non-zero values and no non-zero values are available between quantum number sectors.
+
+Given a symmetry preserving Hamiltonian, one can use rules similar to Kirchoff's loop rules (with total flux equal to zero) to determine the quantum numbers on each index. All of this is automatically handled in the quantum number tensor implementation in TENPACK for abelian quantum numbers. 
+
+For example, consider the Hamiltonian for two spin-half objects on two different sites
 \begin{equation}
-(n-1)^{-1} \sum^n_{i=1} (X_i - \overline{X})^2.
-\label{eq:samplevar}
+\mathbf{S}_1\cdot\mathbf{S}_2=\frac14\left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & -1 & 2 & 0\\
+0 & 2 & -1 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}\right)
 \end{equation}
-Equation~(\ref{eq:samplevar}) gives the formula for
-sample variance.
-\end{verbatim}
-The following output is generated with the above coding:
+where $\mathbf{S}=\boldsymbol{\sigma}/2$ for the Pauli vector $\boldsymbol{\sigma}$ \cite{townsend2000modern} and subscripts denote which site the spin vector is located. The matrix can be divided into three blocks, and in general, we can write a block structure of completely independent pieces as
 \begin{equation}
-(n-1)^{-1} \sum^n_{i=1} (X_i - \overline{X})^2.
-\label{eq:samplevar}
+\mathbf{S}_1\cdot\mathbf{S}_2=1\oplus\left(\begin{array}{cc}
+-1 & 2 \\
+2 & -1
+\end{array}\right)\oplus1
 \end{equation}
-Equation~(\ref{eq:samplevar}) gives the formula for
-sample variance.
+where $\oplus$ is a direct sum. Each of these three independent pieces can be assigned a quantum number (+1, 0, -1; in order). This means that if we were to multiply this matrix with another matrix respecting the same symmetries, we could break the full matrix multiplication into parts. In this case, consider multiplying $\mathbf{S}_1\cdot\mathbf{S}_2$ by itself and noting that one could perform three matrix multiplications, one on each quantum number sector, and obtain the same result.
 
+This idea generalizes to all tensors that respect a quantum number symmetry. When reshaping an index, one can simply sum the abelian quantum numbers together to find the quantum number on the resulting grouped index. Eventually, one will need to contract a tensor. By identifying which inidices are contracted and which are not, one can reshape any tensor into a matrix that must be divisible into quantum number blocks.
 
-\subsection{Enunciations}
-\label{subsub:enunciation}
-The \verb|juliacon|   class file generates the enunciations with the help of
-the following commands:
-\begin{verbatim}
-\begin{theorem}...\end{theorem}
-\begin{strategy}...\end{strategy}
-\begin{property}...\end{property}
-\begin{proposition}...\end{proposition}
-\begin{lemma}...\end{lemma}
-\begin{example}...\end{example}
-\begin{proof}...\end{proof}
-\begin{definition}...\end{definition}
-\begin{algorithm}...\end{algorithm}
-\begin{remark}...\end{remark}
-\end{verbatim}
-The above-mentioned coding can also include optional arguments
-such as
-\begin{verbatim}
-\begin{theorem}[...]. Example for theorem:
-\begin{theorem}[Generalized Poincare Conjecture]
-Four score and seven ... created equal.
-\end{theorem}
-\end{verbatim}
+The implementation in TENPACK has been optimized so that it is fast. This methodology also avoids any issue with numerical round-off error accidentally changing the desired quantum number sector for a given problem. For example, not imposing quantum number symmetries for fermions can lead to a loss or gaining a fermion, which may resulting in finding an answer for a different symmetry sector than was originally intended. it is recommended to use quantum number symmetries whenever the problem displays quantum numbers.
 
-\begin{theorem}[Generalized Poincare Conjecture]
-Four score and seven years ago our fathers brought forth,
-upon this continent, a new nation, conceived in Liberty,
- and dedicated to the proposition that all men are
-created equal.
-\end{theorem}
+\end{appendix}
 
-
-\subsection{Extract}
-\label{subsub:extract}
-Extract environment should be coded within
-\begin{verbatim}
-\begin{extract}..\end{extract}
-\end{verbatim}
-
-\subsection{Balancing column at last page}
-\label{subsub:Balance}
-For balancing the both column length at last page use :
-\begin{verbatim}
-\vadjust{\vfill\pagebreak}
-\end{verbatim}
-
-%\vadjust{\vfill\pagebreak}
-
-at appropriate place in your \TeX{} file or in bibliography file.
-
-\section{Handling references}
-\label{subsub:references}
-References are most easily (and correctly) generated using the
-BIBTEX, which is easily invoked via
-\begin{verbatim}
-\bibliographystyle{juliacon}
-\bibliography{ref}
-\end{verbatim}
-When submitting the document source (.tex) file to external
-parties, the ref.bib file should be sent with it.
-\cite{bezanson2017julia}
 
 \input{bib.tex}
 
