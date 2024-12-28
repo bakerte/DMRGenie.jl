@@ -3,7 +3,20 @@
 \documentclass{juliacon}
 \setcounter{page}{1}
 
-\usepackage{amsmath}
+%\usepackage{amsmath}
+
+
+\usepackage{amssymb,amsmath}
+%\usepackage[pdftex]{graphicx}
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{epstopdf}
+%\usepackage[hidelinks]{hyperref}
+%\usepackage{courier}
+%\usepackage{subcaption}
+
+\usepackage{subfigure}
+
+
 
 \begin{document}
 
@@ -13,7 +26,7 @@
 
 \begin{abstract}
 
-We discuss implementation of a graphical user interface for tensor operations in scientific simulations related to entanglement renormalization. This software, which we call DMRGenie, based on its heavy reliance on Genie which is a well-known software package for web applications. We also discuss the deployment of the software. Scientific simulations with tensor network-based framework of quantum algorithm methods is now possible through this tool without length start-up or learning times.
+We discuss implementation of a graphical user interface for tensor operations in scientific simulations related to entanglement renormalization. We call this software DMRGenie based on its heavy reliance on Genie which is a well-known software package for web applications. We also discuss the deployment of the software. Scientific simulations with tensor network-based framework of quantum algorithm methods are now possible through this tool without lengthy start-up or learning times.
 
 \end{abstract}
 
@@ -62,7 +75,7 @@ Building these algorithms from a purely diagrammatic level is a desirable possib
 
 Julia's solution of the two-level problem allows for an easy implementation of algorithms and simultaneous fast execution of scientific code. We discuss in this article efforts to construct a fully working scientific software package for entanglement renormalization that is simultaneously fast and lightweight. This software package has then been extended to include a user interface that allows for the graphical construction of algorithms without any coding background, our principle goal here.
 
-We will first discuss the background software (DMRjulia and TENPACK) originally developed in 2016 and first introduced to Github in 2020 and full debut on the Julia package environment in 2021. This means that the library has spanned many version of the Julia version starting originally in v0.5 and now continuing to v1.11 and beyond. We believe that some choices from our implementation may be interesting to the broader community, although many of the improvements that were introduced here later appeared in this development independently appeared in Julia from other groups, showing that many issues are being encountered in common and handled in similar ways.
+We will first discuss the background software (DMRjulia and TENPACK; available in Julia's package system as {\tt DMRJtensor} and {\tt TensorPACK}) originally developed in 2016 and first introduced to Github in 2020 and full debut on the Julia package environment in 2021. This means that the library has spanned many version of the Julia version starting originally in v0.5 and now continuing to v1.11 and beyond. We believe that some choices from our implementation may be interesting to the broader community, although many of the improvements that were introduced here later appeared in this development independently appeared in Julia from other groups, showing that common issues are being encountered and handled in similar ways.
 
 DMRGenie is the natural extension of the previously developed software which we debut here. This builds on top of DMRjulia to include a graphical interface for easy development of new algorithms. This is made publicly available through a web interface and available for use with some limitations on the maximum size of the tensors and enforce reasonable computational requirements \cite{dmrgenie}.
 
@@ -82,7 +95,7 @@ The implementation here for methods of entanglement renormalization is given as 
 
 \section{Tensor algebra with TENPACK}
 
-The issue of type stability has been of paramount concern to ensure that any code developed in the language avoids generating too much overhead because of Julia's multiple dispatch capabilities. Because the compiler in Julia must assume that any possible input can be entered into a function, the assumptions of how types are converted and exactly what type is created can generate excess allocations which ultimately slow a program. Eliminating these excess allocations is necessary to create efficient code that is competitive with lower level languages.
+The issue of type stability has been of paramount concern to ensure that any code developed in the language avoids generating too much overhead because of Julia's multiple dispatch capabilities. Since the compiler in Julia must assume that any possible input can be entered into a function, the assumptions of how types are converted and exactly what type is created can generate excess allocations which ultimately slow a program. Eliminating these excess allocations is necessary to create efficient code that is competitive with lower level languages.
 
 For example, when reshaping a tensor, the rank of the tensor changes. The implementation of the basic {\tt Array} type in Julia contains both the element data type and also the rank of the tensor. Because the rank of the tensor is a fluid quantity in entanglement renormalization methods, this naturally creates issues with the base implementation of Julia's library and a desire to reduce allocations for greater efficiency with an alternative struct.
 
@@ -97,23 +110,29 @@ The goal when doing in this in the library is to always to match the performance
 
 
 
-The original hope for Julia was to solve the two-language problem, and that is still largely solved in DMRjulia and TENPACK. We have merely made some compromise choices to ensure that there is efficient implementation because our use case is narrower than the most broad implementation that Julia strives to implement.
+The original hope for Julia was to solve the two-language problem, and that is still largely solved in DMRjulia and TENPACK. We have merely made some compromises to ensure that there is efficient implementation because our use case is narrower than the most broad implementation that Julia strives to implement.
 
 %but some of these developments are not forwarding that goal at least for our purposes. We do not question the implementation in standard Julia functions as this kind of drift towards more specific functions and rewriting some basic functions was bound to happen for a more specific use case. We merely point out that some of these features are different for this library.
 
 
 \section{Graphical interface with DMRGenie}
-The DMRGenie graphical user interface (GUI) allows for tensor network algorithms to be run with minimal to no coding required, and using diagrams to denote the algorithms that have been selected. DMRGenie consists of the Algorithm Runner and the Tensor Network Builder. The Algorithm Runner runs tensor network algorithms such as DMRG using known models or custom Hamiltonians. The Tensor Network Builder allows the user to build their own tensor network and create their own tensor network algorithm using a drag-and-drop system. The frontend was built using HTML, JavaScript, React, and CSS for styling. The backend uses a Model View Controller (MVC) infrastructure. The packages used run the tensor network functions are DMRjulia and TENPACK. So, while both DMRjulia and TENPACK are 100\% from-scratch Julia implementations, DMRGenie is not, but this makes the code easier to use and work with and adapt to changing software standards in the future.
+The DMRGenie graphical user interface (GUI) allows for tensor network algorithms to be run with minimal to no coding required, and using diagrams which are easier to read. DMRGenie consists of the Algorithm Runner and the Tensor Network Builder. The Algorithm Runner executes tensor network algorithms such as DMRG using known models or custom Hamiltonians. The Tensor Network Builder allows the user to build their own tensor network and create their own tensor network algorithm using a drag-and-drop system. The frontend was built using HTML, JavaScript, React, and CSS for styling. The backend uses a Model View Controller (MVC) infrastructure. The packages used to run the tensor network algorithms are DMRjulia and TENPACK. So, while both DMRjulia and TENPACK are 100\% from-scratch Julia implementations, DMRGenie is not, but this makes the code easier to use and work with and adapt to changing software standards in the future.
 
 \subsection{DMRGenie Backend}\label{backend}
-The DMRGenie website was built using a Model View Controller (MVC) infrastructure.  The benefit of a MVC framework is that the backend and frontend can be worked on simultaneously which allows for smoother development. The MVC was created using the Genie.jl Julia package. Genie was chosen because it allowed for full-stack development with Julia as the backend. With Julia as the backend, it is simple to run tensor network functions with DMRjulia and TENPACK. The model and controls are written in Julia while the view is written in Julia and HTML using a ".jl.html" file extension.
+The DMRGenie website was built using a Model View Controller (MVC) infrastructure, which was initialized using the Genie.jl Julia package. Genie was chosen because it allowed for full-stack development with Julia as the backend. This improved the development cycle as it made it simple to run tensor network functions with DMRjulia and TENPACK. The models and controls are written in Julia, while the views are written in Julia and HTML using a \texttt{.jl.html} file extension with supporting JavaScript files for functionality. 
 
-The model is like an object that is passed between the frontend and the backend of the application. It is used to pass data between the two ends. When initializing the model, any variables to pass data are initialized to default values. The data returned by the model is mostly raw data.
+The model is a struct which is used to pass data between the frontend and backend of the application. 
+When a page is initially loaded, a model is initialized with a default set of data. Once the user inputs their options and submits, that raw data is sent to the backend where tensor network computations can then be performed accordingly.
 
-The view file contains the HTML for the application. This file is capable of containing Julia code due to its ".jl.html" file extension. This also allows the controller to pass Julia variables to be displayed or output on the frontend. Despite the allowance of Julia code being executed in the view component, Julia was only used to present the data rather than run computations.
+The view file contains the HTML for the application. This file is capable of containing Julia code due to its ".jl.html" file extension, allowing the controller to pass Julia variables to be output on the frontend. 
 
-The controller is responsible for starting up the HTML page with the relevant data when website is initialized. When a tensor network is created or a tensor network function is run, the controller is responsible to create the tensors and run the algorithm using DMRjulia and TENPACK. The results of any operation are stored in variables and returned to the view component.
+The controller is responsible for starting up the HTML page with the relevant data when the website is initialized. When a tensor network is created or a tensor network function is run, the controller is responsible for creating the tensors and running the algorithm using DMRjulia and TENPACK. The results of any operation are stored in variables and returned to the view component.
 
+
+\begin{figure}[b]
+    \includegraphics[width=\columnwidth]{contraction.png}
+\caption{Contraction two tensors with the Tensor Network Builder interface. a) The initial tensors. b) The input given to the contract menu operation. c) The output tensor. } \label{GUIcontraction}
+\end{figure}
 
 \subsection{DMRGenie Frontend}
 The two main components of DMRGenie are the tensor network builder and the algorithm runner. The frontend of DMRGenie was built using HTML, CSS, and JavaScript along with ReactJS. The only ReactJS component of the app was the Tensor Network Builder. ReactJS was used along with ReactFlow which is a package meant for building node-based editors and interactive diagrams. 
@@ -121,15 +140,31 @@ The two main components of DMRGenie are the tensor network builder and the algor
 \subsection{Algorithm Runner}
 The Algorithm Runner is an interface that allows the user to build their own models or run known models to get the ground state energy of the system. The number of sites for a system and its Hamiltonian must be specified. The current supplied Hamiltonians are for the Hubbard model, the $t-J$ model, and the Heisenberg model \cite{fradkin2013field}. Custom Hamiltonians can be built by the user by specifying the physical dimension of the system, the Hamiltonian constant, and the components of the Hamiltonian.
 
-It is also possible to compute the correlations and impose symmetries on the system. The correlation matrix operators and correlation function operators must be specified to compute correlations. The matrix operators and function operators will then be evaluated at all position on the lattice. 
+
+It is also possible to compute the correlations and impose symmetries on the system. The correlation matrix operators and correlation function operators must be specified to compute correlations. The matrix operators and function operators will then be evaluated at all positions on the lattice. 
 
 Details of the symmetries and how they need to be implemented are included in Appendix~\ref{qsymmetries}.
 
 
 \subsection{Tensor Network Builder}
-The Tensor Network Builder is a drag and drop interface to build tensor networks. The rank of any tensor is specified before they are dropped onto the canvas. The number of connections points on a tensor is equal to the rank of the tensor. Indices can be created by dragging from a connection point on a tensor. It is possible to specify the name and dimension of all indices, and it is possible to rename an index if needed. Possible operations on tensors include contracting, singular value decompositions, eigenvalue decomposition, QR decompositions, and LQ decompositions. When the user is done the algorithm then the "submit" button can be clicked and the algorithm will be run on the backend. For more information about the backend, see Sec.~\ref{backend}. The output of the algorithm will be the tensors that resulted from the last operation. The output is given as a downloadable file.\\
+The Tensor Network Builder is a drag and drop interface to build tensor networks. The rank of any tensor is specified before they are dropped onto the canvas. The number of connections points on a tensor is equal to the rank of the tensor. Indices can be created by dragging from a connection point on a tensor. It is possible to specify the name and dimension of all indices, and it is possible to rename an index if needed. Possible operations on tensors include contractions (see example of interface in Fig.~\ref{GUIcontraction}), singular value decompositions, eigenvalue decompositions, QR decompositions, and LQ decompositions. When the user is done, the "submit" button can be clicked and the algorithm will be run on the backend. The output of the algorithm will be the tensors that resulted from the last operation. The output is given as a downloadable file.\\
 
-ReactJS is used for the tensor network builder because of component reusability and the fast rendering. Many components can be reused because all the tensors and indices objects are reused. The ReactFlow package was designed to build node-based editors and interactive diagrams; however, graphs in computer science have similar structures to tensor networks. The nodes and edges in ReactFlow were generalized to tensors and indices. 
+ReactJS is used for the tensor network builder because of component reusability and the fast rendering. The ReactFlow package was designed to build node-based editors and interactive diagrams; however, graphs in computer science have similar structures to tensor networks. The nodes and edges in ReactFlow were generalized to tensors and indices. 
+
+For example, if the user wanted to input a Heisenberg Hamiltonian of 
+\begin{equation}\label{heisMPO}
+\hat H = -J\sum_{i} \left( \sigma^x_i \sigma^x_{i+1} + \sigma^y_i \sigma^y_{i+1} + \sigma^z_i \sigma^z_{i+1}\right)
+\end{equation}
+where $J$ is the Hamiltonian constant, then it would be possible to do so term by term. An example of the input is given in Fig.~\ref{heismodel}.
+
+\begin{figure}
+\begin{center}
+    \includegraphics[scale=0.5]{HeisenbergModel.png}
+\end{center}
+    \caption{The Heisenberg Model input for the Algorithm Runner written term-by-term as in Eq.~\eqref{heisMPO}.
+    \label{heismodel}
+    }
+\end{figure}
 
 \section{Deployment}
 %-uses resources supplied by the Research Computing services at the Unviersity of Victoria\\
