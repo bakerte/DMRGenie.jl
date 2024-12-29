@@ -1,7 +1,7 @@
 name = "DMRGenie"
-uuid = "b84821dc-2c6b-448c-9841-b51f1356701e"
+uuid = "8fc702ce-c5c1-11ef-3984-dd129c1f8037"
 authors = ["Aaron Dayton <aarondayton87@gmail.com>","Kiana Gallagher", "Thomas E. Baker <bakerte@uvic.ca>"]
-version = "1.0"
+version = "0.99.0"
 
 [deps]
 DMRJtensor = "5b179a51-5399-4802-8f6e-f7014fc12e6f"
