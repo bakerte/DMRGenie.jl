@@ -6,10 +6,7 @@ A live implementation is available on [this website](https://dmrgenie.rs.uvic.ca
 
 This guide gives a general overview of the app, and covers how to set up and run DMRGenie.
 
-To deploy this software on a local machine, we provide the instructions in `/guides/DeveloperGuide`
-
-For modifications to the front end, we provide `/guides/BuilderGuide`
-
+To deploy this software on our web-based implementation, we ask anyone to follow the instructions in `/guides/DeveloperGuide`
 
 ## Using the App
 
