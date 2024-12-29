@@ -1,0 +1,99 @@
+\begin{thebibliography}{10}
+
+\bibitem{dmrjulia}
+Thomas~E. Baker.
+{DMRjulia}.
+\url{https://github.com/bakerte/DMRJtensor.jl}, 2020.
+
+\bibitem{tenpack}
+Thomas~E. Baker.
+{TENPACK}.
+\url{https://github.com/bakerte/TensorPACK.jl}, 2020.
+
+\bibitem{baker2019m}
+Thomas~E Baker, Samuel Desrosiers, Maxime Tremblay, and Martin~P Thompson.
+Basic tensor network computations in physics.
+{\em arXiv preprint arXiv:1911.11566, p.~20}, 2019.
+
+\bibitem{bakerCJP21}
+Thomas~E Baker, Samuel Desrosiers, Maxime Tremblay, and Martin~P Thompson.
+{M{\'e}thodes de calcul avec r{\'e}seaux de tenseurs en physique}.
+{\em Canadian Journal of Physics}, 99:4, 2021.
+\href{http://dx.doi.org/https://doi.org/10.1139/cjp-2019-0611}{doi:https://doi.org/10.1139/cjp-2019-0611}.
+
+\bibitem{baker2024bundled}
+Thomas~E Baker and Negar Seif.
+Bundled matrix product states represent low-energy excitations faithfully.
+{\em Journal of Physics A: Mathematical and Theoretical}, 57(39):395306, 2024.
+
+\bibitem{dmrjulia1}
+Thomas~E Baker and Martin~P Thompson.
+{DMRjulia I. Basic construction of a tensor network library for the density
+  matrix renormalization group}.
+{\em arXiv preprint arXiv:2109.03120}, 2021.
+
+\bibitem{fradkin2013field}
+Eduardo Fradkin.
+{\em Field theories of condensed matter physics}.
+Cambridge University Press, 2013.
+
+\bibitem{dmrgenie}
+Kiana Gallagher, Aaron Dayton, and Thomas~E. Baker.
+{DMRGenie}.
+\url{https://dmrgenie.rs.uvic.ca/}.
+
+\bibitem{krishna1980renormalization}
+HR~Krishna-Murthy, JW~Wilkins, and KG~Wilson.
+Renormalization-group approach to the anderson model of dilute magnetic alloys.
+  i. static properties for the symmetric case.
+{\em Physical Review B}, 21(3):1003, 1980.
+
+\bibitem{levin2007tensor}
+Michael Levin and Cody~P Nave.
+Tensor renormalization group approach to two-dimensional classical lattice
+  models.
+{\em Physical review letters}, 99(12):120601, 2007.
+
+\bibitem{nielsen2010quantum}
+Michael~A Nielsen and Isaac~L Chuang.
+{\em Quantum computation and quantum information}.
+Cambridge university press, 2010.
+
+\bibitem{penrose1971angular}
+Roger Penrose.
+Angular momentum: an approach to combinatorial space-time.
+{\em Quantum theory and beyond}, 151, 1971.
+
+\bibitem{press1992numerical}
+William~H Press, Saul~A Teukolsky, William~T Vetterling, and Brian~P Flannery.
+Numerical recipes in c++.
+{\em The art of scientific computing}, 1992.
+
+\bibitem{townsend2000modern}
+John~S Townsend.
+{\em A modern approach to quantum mechanics}.
+University Science Books (Sausalito, California), 2000.
+
+\bibitem{verstraete2004renormalization}
+Frank Verstraete and J~Ignacio Cirac.
+Renormalization algorithms for quantum-many body systems in two and higher
+  dimensions.
+{\em arXiv preprint cond-mat/0407066}, 2004.
+
+\bibitem{verstraete2006matrix}
+Frank Verstraete and J~Ignacio Cirac.
+Matrix product states represent ground states faithfully.
+{\em Physical Review B—Condensed Matter and Materials Physics}, 73(9):094423,
+  2006.
+
+\bibitem{vidal2007entanglement}
+Guifre Vidal.
+Entanglement renormalization.
+{\em Physical review letters}, 99(22):220405, 2007.
+
+\bibitem{wilson1983renormalization}
+Kenneth~G Wilson.
+The renormalization group and critical phenomena.
+{\em Reviews of Modern Physics}, 55(3):583, 1983.
+
+\end{thebibliography}
