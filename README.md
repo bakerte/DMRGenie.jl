@@ -8,6 +8,8 @@ This guide gives a general overview of the app, and covers how to set up and run
 
 To deploy this software on our web-based implementation, we ask anyone to follow the instructions in `/guides/DeveloperGuide`
 
+Questions? Email [bakerte@uvic.ca](bakerte@uvic.ca)
+
 ## Using the App
 
 There are four main sections of the application as of Aug 10, 2023: the Model input, the Method input, the Measurement output, and the reactive display which shows your current tensor network.
