@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0"/>
+    <title>DMRGenie</title>
+    <link rel="icon" href="/img/home/DMRGenieLogo.png">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/builder.css" rel="stylesheet">
+  </head>
+  <body>
+    <header style="padding-top: 6px;">
+      <a href="/">
+        <img
+          src="/img/home/DMRGenieLogo.png"
+          alt="DRMGenie Logo"
+          style="width:55px; height:auto; padding-left:4px; padding-top:5px"
+        >
+      </a>
+      <h1 style="text-align:center; padding-left:10px;"><a class="title" href="/">DMRGenie</a></h1>
+
+      <div class="subtitle">
+        <p>Tensor Networks Made Easy</p>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="/">Home</a>
+          <a href="tutorial">Tutorial</a>
+          <a href="runalgs">Run Algorithms</a>
+          <a href="build">Build a Tensor Network</a>
+          <a href="https://sites.google.com/view/bakerte/home/research" target="blank" rel="noopener noreferrer">Our Research</a>
+        </div>
+      </div>
+    </header>
+    <hr style="position:relative; margin: 0px; margin-top:10px;">
+    <!-- <br> -->
+    <%
+      @yield
+    %>
+  </body>
+
+  <footer style="color: #1F6E93; background-color: #F5F4F6;">
+    <p style="padding-right:25px; font-size:2vmin; color: #1F6E93;"><b>DMRGenie</p>
+  </footer>
+</html>

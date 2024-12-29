@@ -1,0 +1,98 @@
+<html>
+
+<head>
+	<title>Network Builder</title>
+
+
+	<!-- JS Packages -->
+	<script
+		src="https://unpkg.com/react/umd/react.production.min.js"
+		crossorigin
+	></script>
+	<script
+		src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+		crossorigin
+	></script>
+	<script
+		src="https://unpkg.com/@babel/standalone/babel.min.js"
+	></script>
+	<script
+		src="https://unpkg.com/reactflow"
+	></script>
+
+
+	<!-- Our JS Code -->
+	<script
+		src="/js/Builder/TensorNode.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/InvisibleNode.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/DimensionEdge.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/UploadOption.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/ContractOption.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/SVDOption.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/SplitEdges.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/ConnectEdges.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/Copy.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/Paste.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/Undo.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/Redo.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/QROption.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/LQOption.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/EigenvalueOption.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/Lanczos.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/DNDMenu.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/ColorMenu.js" type="text/babel"
+	></script>
+	<script
+		src="/js/Builder/NetworkBuilder.js" type="text/babel"
+	></script>
+</head>
+
+<body>
+    <div class="flex-container1">
+		<!-- Disgusting Hack! But it should work -->
+		<div id="outputPath" name="outputPath" value="$(outputPath)"></div>
+		<div id="backendError" name="backendError" value="$(error)"></div>
+
+		<div id="networkDisplay"></div>
+	</div>
+</body>
+
+
+</html>
+
+
+

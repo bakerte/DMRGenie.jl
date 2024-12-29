@@ -1,0 +1,379 @@
+/*Lato and Merriweather font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+*{
+    --title-color:  #1F6E93;
+  --title-font: "Lato", sans-serif;
+  --title-font-weight: 600;
+  --subtitle-colour: #71797E;
+  --subtitle-font-weight: 400;
+}
+
+
+.init-hidden{
+    display: none;
+}
+
+.flex-container1{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+}
+
+.flex-container2{
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.counting-button{
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+
+}
+
+canvas{
+    width:  95%;
+    height: 100%;
+    margin: 0;
+    margin-top: 24px;
+    border-radius: 15px;
+}
+
+input[type='number']{
+    width: 60px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: x-large;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #091834;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height:6vh;
+    font-family: Palatino;
+    font-size: x-large;
+    background-color:#ffffff;
+    color: #0084ff;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 25px;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 5vh;
+    background-color:#40444a;
+    color: #cd7619;
+    text-align: right;
+    z-index: 3;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  margin: 15px 0;
+}
+
+.subtitle {
+    min-width: 210px;
+    padding-left: 14px;
+    padding-right: 60px;
+    padding-top: 12px;
+    font-style: var(--title-font);
+    font-weight: var(--subtitle-font-weight);
+    color: var(--subtitle-colour);
+}
+
+.mainpage {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65%;
+    text-align: center;
+    padding-top:25px;
+    font-size: large;
+}
+
+.subpage {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 65%;
+  text-align: left;
+  padding-top:25px;
+  font-size: large;
+}
+
+.title-text {
+    color: rgb(75, 75, 91);
+    font-family: Tahoma;
+}
+
+a.title:link {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--title-font-weight);
+  }
+  
+a.title:visited {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--title-font-weight);
+}
+
+a.title:hover {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--title-font-weight);
+}
+
+a.title:active {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--title-font-weight);
+}
+
+a.title:link, a:visited {
+    text-decoration: none;
+}
+
+img.loading_gif {
+    width: 50%;
+    height: auto;
+}
+
+.side_by_side {
+  width: 100%;
+  min-height: 300px;
+  margin: auto;
+  padding: 10px;
+  font-size: large;
+}
+
+.left_side {
+  width: 50%;
+  float: left;
+}
+
+.right_side {
+  margin-left: 50%;
+}
+
+.side_image {
+  width:110%;
+  height:auto;
+  padding-top:3%;
+}
+
+.center_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+sub {
+  display: inline-block;
+  margin-left:-5px;
+}
+
+/***********/
+/*DROPDOWN*/
+/*********/
+
+.dropbtn {
+    background-color: var(--title-color);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    right: 0px;
+}
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 2%;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    right: 0px;
+    font-size: 16px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #2d6985;}
+
+
+/************/
+/*TOOL TIPS*/
+/**********/
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    width: 60px;
+    color: white;
+    font-size: 12px;
+    background-color: #192733;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+  }
+
+  .tooltip-text::before {
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #192733;
+    z-index: 1;
+  }
+
+  .hint-img {
+    width:15px;
+    height:auto;
+  }
+  
+  .hover-text:hover .tooltip-text {
+    visibility: visible;
+  }
+
+  #top {
+    top: -40px;
+    left: -50%;
+  }
+  
+  #top::before {
+    top: 80%;
+    left: 45%;
+  }
+  
+  #bottom {
+    top: 25px;
+    left: -50%;
+  }
+  
+  #bottom::before {
+    top: -5%;
+    left: 45%;
+  }
+  
+  #left {
+    top: -8px;
+    right: 120%;
+  }
+  
+  #left::before {
+    top: 35%;
+    left: 94%;
+  }
+  
+  #right {
+    top: -8px;
+    left: 120%;
+  }
+  
+  #right::before {
+    top: 35%;
+    left: -2%;
+  }
+  
+  .hover-text {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    font-family: Arial;
+    text-align: center;
+  }
+
+/* Media */
+
+
+@media (max-width: 1200px) {
+  .mainpage {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    text-align: center;
+    padding-top:25px;
+    font-size: large;
+}
+
+  .subpage {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    text-align: left;
+    padding-top:25px;
+    font-size: large;
+  }
+
+  .side_image {
+    height:20%;
+    height:auto;
+    padding-top:3%;
+  }
+}
