@@ -4,7 +4,7 @@
 
 This project is a graphical user interface (GUI) for the [DMRjulia](https://github.com/bakerte/DMRJtensor.jl) library for entanglement renormalization.
 
-A live implementation is available on [https://dmrgenie.rs.uvic.ca/](this website) with resources hosted by the the Research Computing Services at the University of Victoria.
+A live implementation is available on [this website](https://dmrgenie.rs.uvic.ca/) with resources hosted by the the Research Computing Services at the University of Victoria.
 
 To deploy this software on a local machine, we provide the instructions in `/guides/DeveloperGuide`
 
