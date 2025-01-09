@@ -17,11 +17,11 @@ Genie.loadapp()
 cd(@__DIR__)
 Pkg.activate(".")
 
-# !!! Main.UserApp is configured as an alias for Main.TensEZ and you might encounter it in some tests
-using Main.TensEZ, Test, TestSetExtensions, Logging
+# !!! Main.UserApp is configured as an alias for Main.DMRGenie and you might encounter it in some tests
+using Main.DMRGenie, Test, TestSetExtensions, Logging
 
 Logging.global_logger(NullLogger())
 
-@testset ExtendedTestSet "TensEZ tests" begin
+@testset ExtendedTestSet "DMRGenie tests" begin
   @includetests ARGS
 end

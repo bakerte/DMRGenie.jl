@@ -2,9 +2,9 @@ using Genie
 using Genie.Router
 using Genie.Renderer.Html
 using Genie.Requests
-using TensEZ.Pages
-using TensEZ.TensorNetworksController
-using TensEZ.TensorNetworks
+using DMRGenie.Pages
+using DMRGenie.TensorNetworksController
+using DMRGenie.TensorNetworks
 using UUIDs
 using JSON
 using TensorPACK

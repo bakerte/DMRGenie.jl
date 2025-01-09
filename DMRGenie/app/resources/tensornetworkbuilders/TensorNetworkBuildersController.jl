@@ -2,7 +2,7 @@ module TensorNetworkBuildersController
   using Genie.Renderer.Html
   using DMRJtensor
   using TensorPACK
-  # using TensEZ.TensorNetworks
+  # using DMRGenie.TensorNetworks
 
   function buildnetwork()
     clear_usergenerated_folder()

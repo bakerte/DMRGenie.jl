@@ -1,4 +1,4 @@
-module TensEZ
+module DMRGenie
 
 using Genie
 

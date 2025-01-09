@@ -2,7 +2,7 @@ module TensorNetworksController
   using Genie.Renderer.Html
   using DMRJtensor
   using TensorPACK
-  using TensEZ.TensorNetworks
+  using DMRGenie.TensorNetworks
 
   # Have the spin ops dedfined at the top level for getfield(...)
 

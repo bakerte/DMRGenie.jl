@@ -41,10 +41,10 @@ The *Display* shows the user what the tensor network to be used in calculations 
 This application uses a Julia package called Genie which allows Julia code to be put on a web server simply.
 Genie is a Model-View-Controller (MVC) framework.
 
-A Model in an MVC framework is basically the application's structure. For this application, the main model is the `TensorNetwork` model, which can be seen in `TensEZ/app/resources/tensornetworks/TensorNetworks.jl`. There may be more models added later depending on what is required.
+A Model in an MVC framework is basically the application's structure. For this application, the main model is the `TensorNetwork` model, which can be seen in `DMRGenie/app/resources/tensornetworks/TensorNetworks.jl`. There may be more models added later depending on what is required.
 
 A View in an MVC framework is what is displayed to the user: the front-end. An application can have many views, one for each page.
-The main view of DMRGenie is `TensEZ/app/resources/tensornetworks/views/DMRGenie.jl.html`, a `.jl.html file`. A `.jl.html` file acts as a normal HTML file with the added benefit of being able to run Julia code and have Julia variables passed in.
+The main view of DMRGenie is `DMRGenie/app/resources/tensornetworks/views/DMRGenie.jl.html`, a `.jl.html file`. A `.jl.html` file acts as a normal HTML file with the added benefit of being able to run Julia code and have Julia variables passed in.
 This allows data calculated on the back-end to be passed to the front-end and be presented to the user.
 Views are linked to through `routes.jl -> specified controller -> specified view`.
 
@@ -62,18 +62,18 @@ Other packages considered were: electron for Julia, which would allow a download
 
 ## Setup
 
-Navigate to the `tensez` directory once the repository has been cloned and then into the `TensEZ` folder within it.
+Navigate to the `tensez` directory once the repository has been cloned and then into the `DMRGenie` folder within it.
 
 Install the necessary packages with instantiate.
 
 ```
-cd("tensez/TensEZ")
+cd("tensez/DMRGenie")
 ] instantiate
 ```
 
 ## Running the App
 
-The app must be activated by running the following from the `TensEZ` directory
+The app must be activated by running the following from the `DMRGenie` directory
 
 ```
 ] activate .
@@ -83,10 +83,10 @@ which should give output like:
 
 ```
 (@v1.8) pkg> activate .
-  Activating project at `C:\Users\aaron\repos\tensez\TensEZ`
+  Activating project at `C:\Users\aaron\repos\tensez\DMRGenie`
 ```
 
-Make sure that the path ends with `tensez/TensEZ`, if not then run `cd("<path_to_repo>/tensez/TensEZ")` from the Julia CLI.
+Make sure that the path ends with `tensez/DMRGenie`, if not then run `cd("<path_to_repo>/tensez/DMRGenie")` from the Julia CLI.
 
 Then exit the Pkg prompt with *backspace*.
 
