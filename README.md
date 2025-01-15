@@ -64,18 +64,26 @@ Other packages considered were: electron for Julia, which would allow a download
 
 ## Setup
 
-Navigate to the `tensez` directory once the repository has been cloned and then into the `DMRGenie` folder within it.
+Navigate to the `DMRGenie.jl` directory once the repository has been cloned and then into the `DMRGenie` folder within it.
 
 Install the necessary packages with instantiate.
 
 ```
-cd("tensez/DMRGenie")
+cd("DMRGenie.jl/DMRGenie")
 ] instantiate
 ```
 
-## Running the App
+## Running the App locally
 
 In order to run the app locally, Julia 1.9.x is required.
+
+### The simple way
+
+Go to the `DMRGenie` directory (NOT `DMRGenie.jl`) and execute the command `./run.sh`.
+
+The app should start and open your browser to the website automatically. If your browser is not opened, then simply go to the URL http://127.0.0.1:8000 
+
+### The in depth way (under the hood)
 
 The app must be activated by running the following from the `DMRGenie` directory
 
@@ -87,10 +95,10 @@ which should give output like:
 
 ```
 (@v1.8) pkg> activate .
-  Activating project at `C:\Users\aaron\repos\tensez\DMRGenie`
+  Activating project at `C:\Users\aaron\repos\DMRGenie.jl\DMRGenie`
 ```
 
-Make sure that the path ends with `tensez/DMRGenie`, if not then run `cd("<path_to_repo>/tensez/DMRGenie")` from the Julia CLI.
+Make sure that the path ends with `DMRGenie.jl/DMRGenie`, if not then run `cd("<path_to_repo>/DMRGenie.jl/DMRGenie")` from the Julia CLI.
 
 Then exit the Pkg prompt with *backspace*.
 
