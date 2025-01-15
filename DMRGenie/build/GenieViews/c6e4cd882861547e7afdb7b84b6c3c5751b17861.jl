@@ -997,9 +997,8 @@ function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
                                                                         )
                                                                         Genie.Renderer.Html.input(
                                                                             name = "physical_index[1][1]",
-                                                                            required = "required",
-                                                                            id = "physical_index[1][1]",
                                                                             htmlsourceindent = "10",
+                                                                            id = "physical_index[1][1]",
                                                                             type = "number",
                                                                         )
                                                                     ]
@@ -1031,17 +1030,15 @@ function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
                                                                         Genie.Renderer.Html.input(
                                                                             name = "range_start[1]",
                                                                             min = "1",
-                                                                            required = "required",
-                                                                            id = "range_start[1]",
                                                                             htmlsourceindent = "10",
+                                                                            id = "range_start[1]",
                                                                             type = "number",
                                                                         )
                                                                         Genie.Renderer.Html.input(
                                                                             name = "range_stop[1]",
                                                                             min = "1",
-                                                                            required = "required",
-                                                                            id = "range_stop[1]",
                                                                             htmlsourceindent = "10",
+                                                                            id = "range_stop[1]",
                                                                             type = "number",
                                                                         )
                                                                     ]
