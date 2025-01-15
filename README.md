@@ -8,6 +8,8 @@ This guide gives a general overview of the app, and covers how to set up and run
 
 To deploy this software on our web-based implementation, we ask anyone to follow the instructions in `/guides/DeveloperGuide`
 
+Please note that **Julia version 1.9.x** is required for local use.
+
 Questions? Email [bakerte@uvic.ca](bakerte@uvic.ca)
 
 ## Using the App
@@ -72,6 +74,8 @@ cd("tensez/DMRGenie")
 ```
 
 ## Running the App
+
+In order to run the app locally, Julia 1.9.x is required.
 
 The app must be activated by running the following from the `DMRGenie` directory
 
