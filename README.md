@@ -19,7 +19,7 @@ In order to run the app locally, Julia 1.9.x is required.
 
 ### The simple way
 
-Go to the `DMRGenie` directory (NOT `DMRGenie.jl`) and execute the command `./run.sh`.
+Go to the `DMRGenie` directory (**Not** `DMRGenie.jl`) and execute the command `./run.sh`.
 
 The app should start and open your browser to the website automatically. If your browser is not opened, then simply go to the URL http://127.0.0.1:8000 
 
