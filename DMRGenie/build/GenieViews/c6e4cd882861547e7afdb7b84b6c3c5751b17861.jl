@@ -1077,7 +1077,6 @@ function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
                                         end
                                         Genie.Renderer.Html.input(
                                             name = "num_tensors",
-                                            max = "15",
                                             min = "3",
                                             htmlsourceindent = "6",
                                             id = "num_tensors",
