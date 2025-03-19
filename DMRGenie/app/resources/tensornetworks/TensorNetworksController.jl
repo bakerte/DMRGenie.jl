@@ -75,7 +75,7 @@ module TensorNetworksController
 
   function DMRGenie(tensor_network)
     # Safety - TODO - Improve
-    if (tensor_network.num_tensors < 3 || tensor_network.num_tensors > 15)
+    if (tensor_network.num_tensors < 3)
       # Initialize variables
       hamiltonain_measurement = NaN
       dense_rho = nothing
