@@ -95,7 +95,7 @@ route("/runalgs", method = POST) do
     
     # Computation Limitation for Correlations
     # This limit is also imposed in model_fields.js
-    if num_tensors > 20
+    if num_tensors > 15
       correlation_flag = false
     end
 
