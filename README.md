@@ -1,3 +1,6 @@
+![DMRGenieLogo](https://github.com/user-attachments/assets/3ad966d4-f302-4ab1-a49f-a1ae1593d050)
+
+
 # DMRGenie.jl
 
 This project is a graphical user interface (GUI) for the [DMRjulia](https://github.com/bakerte/DMRJtensor.jl) library for entanglement renormalization.
