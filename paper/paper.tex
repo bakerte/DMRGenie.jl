@@ -28,7 +28,7 @@ The Julia programming language is a good if not great attempt to solve this two-
 
 In any scientific endeavour, the need to use numerical techniques is highly necessary. And for new advances to be made, new methods must be able to be implemented into any given language to evolve beyond the state-of-the-art. For anyone developing new algorithms, the need for a programming framework that enables as many solutions of the two-language problem as possible is necessary, making Julia a strong contender for algorithmic development.
 
-Quantum information methods have become a tantalizing path to creating new algorithms and methods. These range from quantum algorithms implemented on quantum computers \cite{nielsen2010quantum} (but since no perfect quantum computer exists as of yet, so simulations with classical methods are still required) to entanglement renormalization techniques.\footnote{This class of methods is more commonly referred to as tensor networks, simply, but with the rise of machine-learning and other methods particularly in quantum chemistry that are formulated on tensor networks, a distinguishing name is required. We choose to expand the usage of the term from Ref.~\cite{vidal2007entanglement} since all methods are fundamentally optimizing over quantities relevant for quantum information ({\it i.e.}, the entanglement) and renormalization was originally introduced to describe this class of methods \cite{wilson1983renormalization,krishna1980renormalization}. The methods required to implement an algorithm in this context is different from other contexts, notably machine learning.} 
+Quantum information methods have become a tantalizing path to creating new algorithms and methods. These range from quantum algorithms implemented on quantum computers \cite{nielsen2010quantum} to entanglement renormalization techniques.\footnote{This class of methods is more commonly referred to as tensor networks, simply, but with the rise of machine-learning and other methods particularly in quantum chemistry that are formulated on tensor networks, a distinguishing name is required. We choose to expand the usage of the term from Ref.~\cite{vidal2007entanglement} since all methods are fundamentally optimizing over quantities relevant for quantum information ({\it i.e.}, the entanglement) and renormalization was originally introduced to describe this class of methods \cite{wilson1983renormalization,krishna1980renormalization}. The methods required to implement an algorithm in this context is different from other uses, notably machine learning.} 
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{diagram.png}
@@ -39,7 +39,7 @@ Quantum information methods have become a tantalizing path to creating new algor
 
 Methods of entanglement renormalization use quantities native to quantum information ({\it i.e.}, the density matrix or the entropy) in order to optimize a a quantum problem to find solutions to the eigenvalue problem \cite{townsend2000modern}. Entanglement renormalization techniques are formulated on a graph of tensors and have definite rules for tensor operations. Because tensor computations and operations can be cumbersome to represent mathematically in index notation, the field has adopted a diagram notation that allows for the improved communication of algorithms. Namely, the rank of the tensor corresponds to the number of lines on the diagram \cite{penrose1971angular}. An example is shown for rank-1, 2, and 3 tensors in Fig.~\ref{diagram}. 
 
-Realistically, only about a rank-14 tensor can be represented on a laptop machine. This is because each of the tensor indices has dimension of at least two, approaching the memory limitations of these devices. Therefore, the rank of the tensors represented here are small and often only a few indices are present.
+%Realistically, only about a rank-14 tensor can be represented on a laptop machine. This is because each of the tensor indices has dimension of at least two, approaching the memory limitations of these devices. Therefore, the rank of the tensors represented here are small and often only a few indices are present.
 
 %When contracting two tensors together, one can connect two indices on the same tensor ({\it i.e.}, tracing over indices) or between tensors (contraction). When representing a network of tensors, the indices are typically not kept track of. Instead, indices that point towards each other or have matching labels are assumed to be contracted eventually. This rarely causes confusion when implementing algorithms.
 
@@ -58,7 +58,7 @@ The use of the diagram notation is useful for representing large numbers of tens
 \end{align}
 which is far more intricate than the diagram notation but conveys no extra information. Any quantum operator (for example, the Hamiltonian) can be decomposed into a similar site-by-site form involving many tensors.
 
-Building these algorithms from a purely diagrammatic level is a desirable possibility. This opens the possibility to using a graphical user interface to denote the various steps in the implementation of the entanglement renormalization algorithms
+Building these algorithms from a purely diagrammatic level would be useful. This opens the possibility to using a graphical user interface to denote the various steps in the implementation of the entanglement renormalization algorithms.
 
 Julia's solution of the two-level problem allows for an easy implementation of algorithms and simultaneous fast execution of scientific code. We discuss in this article efforts to construct a fully working scientific software package for entanglement renormalization that is simultaneously fast and lightweight. This software package has then been extended to include a user interface that allows for the graphical construction of algorithms without any coding background, our principle goal here.
 
@@ -135,7 +135,7 @@ The Algorithm Runner is an interface that allows the user to build their own mod
 
 For example, if the user wanted to input a Heisenberg Hamiltonian of 
 \begin{equation}\label{heisMPO}
-\hat H = -J\sum_{i} \left( \sigma^x_i \sigma^x_{i+1} + \sigma^y_i \sigma^y_{i+1} + \sigma^z_i \sigma^z_{i+1}\right)
+\hat H = -J\sum_{i} \left( \hat S^x_i \hat S^x_{i+1} + \hat S^y_i \hat S^y_{i+1} + \hat S^z_i \hat S^z_{i+1}\right)
 \end{equation}
 where $J$ is the Hamiltonian constant, then it would be possible to do so term by term. An example of the input is given in Fig.~\ref{heismodel}.
 
