@@ -37,7 +37,7 @@ Quantum information methods have become a tantalizing path to creating new algor
 }
 \end{figure}
 
-Methods of entanglement renormalization use quantities native to quantum information ({\it i.e.}, the density matrix or the entropy) in order to optimize a a quantum problem to find solutions to the eigenvalue problem \cite{townsend2000modern}. Entanglement renormalization techniques are formulated on a graph of tensors and have definite rules for tensor operations. Because tensor computations and operations can be cumbersome to represent mathematically in index notation, the field has adopted a diagram notation that allows for the improved communication of algorithms. Namely, the rank of the tensor corresponds to the number of lines on the diagram \cite{penrose1971angular}. An example is shown for rank-1, 2, and 3 tensors in Fig.~\ref{diagram}. 
+Methods of entanglement renormalization use quantities native to quantum information ({\it i.e.}, the density matrix or the entropy) in order to optimize a a quantum problem to find solutions to the eigenvalue problem \cite{townsend2000modern}. Entanglement renormalization techniques are formulated on a graph of tensors and have definite rules for tensor operations. Because tensor computations and operations can be cumbersome to represent mathematically in index notation, the field has adopted a diagram notation that allows for the improved communication of algorithms. Namely, the rank of the tensor corresponds to the number of lines attached to a shape on the diagram \cite{penrose1971angular}. An example is shown for rank-1, 2, and 3 tensors in Fig.~\ref{diagram}. 
 
 %Realistically, only about a rank-14 tensor can be represented on a laptop machine. This is because each of the tensor indices has dimension of at least two, approaching the memory limitations of these devices. Therefore, the rank of the tensors represented here are small and often only a few indices are present.
 
@@ -50,13 +50,13 @@ Methods of entanglement renormalization use quantities native to quantum informa
 }
 \end{figure}
 
-The use of the diagram notation is useful for representing large numbers of tensors in a coherent way without representing the full mathematical detail (see Fig.~\ref{network}). For example, the wavefunction when decomposed through a series of reshapes and singular value decompositions (SVD) takes the form \cite{bakerCJP21}
+The use of the diagram notation is useful for representing large numbers of tensors in a coherent way without representing the full mathematical detail (see Fig.~\ref{network}). For example, the wavefunction when decomposed through a series of reshapes and singular value decompositions (SVD) takes the form of a matrix product state (MPS) \cite{bakerCJP21}
 \begin{align}\nonumber
 |\psi\rangle&=\sum_{\substack{\sigma_1\sigma_2\sigma_3\\\sigma_4\sigma_5\sigma_6}}\sum_{\substack{a_1a_2a_3\\a_4a_5}}A^{\sigma_1}_{a_1}A^{\sigma_2}_{a_1a_2}A^{\sigma_3}_{a_2a_3}A^{\sigma_4}_{a_3a_4}A^{\sigma_5}_{a_4a_5}A^{\sigma_6}_{a_5}\\
 &\quad\quad\quad\quad\quad\quad\quad\quad\times|\sigma_1\sigma_2\sigma_3\sigma_4\sigma_5\sigma_6\rangle
 \label{mpsform}
 \end{align}
-which is far more intricate than the diagram notation but conveys no extra information. Any quantum operator (for example, the Hamiltonian) can be decomposed into a similar site-by-site form involving many tensors.
+which is far more intricate than the diagram notation but conveys no extra information. Any quantum operator (for example, the Hamiltonian) can be decomposed into a similar site-by-site form, called a matrix product operator (MPO).
 
 Building these algorithms from a purely diagrammatic level would be useful. This opens the possibility to using a graphical user interface to denote the various steps in the implementation of the entanglement renormalization algorithms.
 
@@ -72,7 +72,7 @@ DMRGenie is the natural extension of the previously developed software which we 
 
 DMRjulia is a software package in the Julia package environment that is 100\% written in the Julia programming language. This makes the software fast and light-weight, ultimately taking only a few kilobytes to install, and optimized to the point of being as fast as lower-level implementations of the same algorithms.
 
-The library implements several classes of tensor network anstaz to represent wavefunctions of quantum problems. This includes the matrix product state (MPS) \cite{verstraete2006matrix,baker2024bundled}, projected entangled pair states (PEPS) \cite{verstraete2004renormalization}, multiscale entanglement renormalization anstaz (MERA) \cite{vidal2007entanglement}, and classical tensor network algorithms such as the tensor renormalization group (TRG) \cite{levin2007tensor}. Each of these implementations is done with care towards ease of use, culminating in the DMRGenie implementation here.  All of these tensor networks are implemented in a fully flexible way.
+The library implements several classes of tensor network anstaz to represent wavefunctions of quantum problems. This includes the MPS \cite{verstraete2006matrix,baker2024bundled}, projected entangled pair states (PEPS) \cite{verstraete2004renormalization}, multiscale entanglement renormalization anstaz (MERA) \cite{vidal2007entanglement}, and classical tensor network algorithms such as the tensor renormalization group (TRG) \cite{levin2007tensor}. Each of these implementations is done with care towards ease of use, culminating in the DMRGenie implementation here.  All of these tensor networks are implemented in a fully flexible way.
 
 The algorithms can be accessed and coded in a variety of styles from the basic manipulation of tensors with four basic operations (reshaping, permuting tensors, contraction, decomposition) \cite{bakerCJP21,baker2019m,dmrjulia1}. Other operations such as joining tensor indices together (as a generalization of the direct sum operation on vectors or matrices) is also available. 
 
