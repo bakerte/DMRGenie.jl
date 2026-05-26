@@ -1,5 +1,9 @@
+# Contributing
 
-# Developer Certificate of Origin (Version 1.1)
+DMRGenie is an open source project licensed under the GNU license. Contributions are welcomed such that contributors certify that their contributions are in accordance with *Developer Certificate of Origin (Version 1.1)* below. 
+
+
+## Developer Certificate of Origin (Version 1.1)
 
 The following text was taken from https://developercertificate.org:
 
