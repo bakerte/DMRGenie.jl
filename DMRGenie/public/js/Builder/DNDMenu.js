@@ -72,10 +72,9 @@ const DNDMenu = ({
               } else if (newVal<1){
                 setRankShown("");
                 setRank(1);
-              // TODO - Uncomment if limitation needed
-              // } else if (newVal>4) {
-              //   setRankShown(4);
-              //   setRank(4);
+              } else if (newVal>4) {
+                setRankShown(4);
+                setRank(4);
               } else {
                 setRankShown(newVal);
                 setRank(newVal);

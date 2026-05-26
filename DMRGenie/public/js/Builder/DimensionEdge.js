@@ -65,9 +65,8 @@ function DimensionEdge({
               } else {
                 if (newVal<1){
                   setDimInput("");
-                // TODO - Uncomment this if you want a limitation
-                // } else if (newVal>5) {
-                //   setDimInput(5);
+                } else if (newVal>5) {
+                  setDimInput(5);
                 } else {
                   setDimInput(newVal);
                 }

@@ -478,10 +478,9 @@ function run_upload(JSON, computed_tensors)
   for s in size(tensor)
     Z *= s
   end
-  # TODO - Uncomment if we want limitations
-  # if Z > 2^10 # TODO - How large do we want this?
-  #   throw("Tensor too large")
-  # end
+  if Z > 2^10 # TODO - How large do we want this?
+    throw("Tensor too large")
+  end
 
   T = nametens(tensor, names)
   upload_result = tensorNode(id, T)
@@ -750,10 +749,9 @@ function get_tensor(id, computed_tensors, edge_set)
   for s in tensor_size
     Z *= s
   end
-  # TODO - Uncomment if we want limitations
-  # if Z > 2^10 # TODO - How large do we want this?
-  #   throw("Tensor too large")
-  # end
+  if Z > 2^10 # TODO - How large do we want this?
+    throw("Tensor too large")
+  end
 
 
 
