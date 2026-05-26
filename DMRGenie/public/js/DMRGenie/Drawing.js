@@ -62,11 +62,20 @@ function revert_mera_canvas_context() {
   ctx.scale(1 / 0.8, 1 / 0.8);
 }
 
+// function loading() {
+//   document.getElementById("loading_div").style.display = "block";
+//   let c = document.getElementById("pictures");
+//   let ctx = c.getContext("2d");
+//   ctx.clearRect(0, 0, c.width, c.height);
+// }
+
 function loading() {
-  document.getElementById("loading_div").style.display = "block";
-  let c = document.getElementById("pictures");
-  let ctx = c.getContext("2d");
-  ctx.clearRect(0, 0, c.width, c.height);
+    document.getElementById("loading_div").style.display = "block";
+
+    let c = document.getElementById("pictures");
+    let ctx = c.getContext("2d");
+
+    ctx.clearRect(0, 0, c.width, c.height);
 }
 
 function find_scale(length_obj, num_elements, width) {

@@ -25,18 +25,52 @@
             }
         };
     </script>
+    <script>
+        window.onload = function() {
+            // Initialize
+            SystemChange();
+            HideOrShowModelOptions();
+            ShowRequiredOutputs();
+
+            // Draw
+            update();
+
+            // Send an alert if there was bad input
+            alert_message = document.getElementById("alert_message").value;
+            if (alert_message) {
+                alert(alert_message);
+            }
+
+            // Form submit handler
+            document.getElementById("algForm").addEventListener("submit", function(event) {
+
+                // Prevent immediate submission
+                event.preventDefault();
+
+                // Disable button
+                btnSubmit.disabled = true;
+
+                // Show loading UI
+                loading();
+
+                // Allow browser to render loading GIF before submit
+                setTimeout(() => {
+                    event.target.submit();
+                }, 2000);
+            });
+        };
+    </script>
 </head>
 
 <body>
     <div class="flex-container1">
 
         <div class="flex-container2">
-
             <form 
+                id="algForm"
                 action="/runalgs"
                 method="POST"
                 enctype="multipart/form-data"
-                onsubmit="btnSubmit.disabled = true; loading(); return true;"
             >
 
 

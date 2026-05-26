@@ -3,11 +3,11 @@
 function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
     tensor_network = Genie.Renderer.vars(:tensor_network),
     quantum_measurement = Genie.Renderer.vars(:quantum_measurement),
+    context = Genie.Renderer.vars(:context),
     symmetry_rho_path = Genie.Renderer.vars(:symmetry_rho_path),
     symmetry_correlation_path = Genie.Renderer.vars(:symmetry_correlation_path),
     hamiltonain_measurement = Genie.Renderer.vars(:hamiltonain_measurement),
     dense_correlation_path = Genie.Renderer.vars(:dense_correlation_path),
-    context = Genie.Renderer.vars(:context),
     alert_message = Genie.Renderer.vars(:alert_message),
     dense_rho_path = Genie.Renderer.vars(:dense_rho_path),
 )
@@ -54,6 +54,38 @@ function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
                     """
             ]
         end
+        Genie.Renderer.Html.script(htmlsourceindent = "2") do
+            [
+                """
+                        window.onload = function() {
+                            // Initialize
+                            SystemChange();
+                            HideOrShowModelOptions();
+                            ShowRequiredOutputs();
+                            // Draw
+                            update();
+                            // Send an alert if there was bad input
+                            alert_message = document.getElementById("alert_message").value;
+                            if (alert_message) {
+                                alert(alert_message);
+                            }
+                            // Form submit handler
+                            document.getElementById("algForm").addEventListener("submit", function(event) {
+                                // Prevent immediate submission
+                                event.preventDefault();
+                                // Disable button
+                                btnSubmit.disabled = true;
+                                // Show loading UI
+                                loading();
+                                // Allow browser to render loading GIF before submit
+                                setTimeout(() => {
+                                    event.target.submit();
+                                }, 2000);
+                            });
+                        };
+                    """
+            ]
+        end
         Genie.Renderer.Html.div(class = "flex-container1", htmlsourceindent = "2") do
             [
                 Genie.Renderer.Html.div(
@@ -61,12 +93,19 @@ function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
                     htmlsourceindent = "3",
                 ) do
                     [
+                        """<!--  
+                                    <form 
+                                        action="/runalgs"
+                                        method="POST"
+                                        enctype="multipart/form-data"
+                                        onsubmit="btnSubmit.disabled = true; loading(); return true;"
+                                    >  -->"""
                         Genie.Renderer.Html.form(
                             method = "POST",
                             enctype = "multipart/form-data",
                             action = "/runalgs",
-                            onsubmit = "btnSubmit.disabled = true; loading(); return true;",
                             htmlsourceindent = "4",
+                            id = "algForm",
                         ) do
                             [
                                 """<!--  Hidden input containing alert message to be accessed by java script  -->"""

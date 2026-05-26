@@ -16,7 +16,7 @@ function func_1acfb97d11f97e078f703f4e4ca0335b9263610b(;
                 Genie.Renderer.Html.h1(class = "title-text", htmlsourceindent = "3") do
                     [
                         """
-                                        Access and Create the most powerful tools in modern physics
+                                        Access and Create the Most Powerful Tools in Modern Physics
                                     """
                     ]
                 end
@@ -86,7 +86,7 @@ function func_1acfb97d11f97e078f703f4e4ca0335b9263610b(;
                 ) do
                     [
                         """
-                                        What's included?
+                                        What's Included?
                                     """
                     ]
                 end
