@@ -3,11 +3,11 @@
 function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
     tensor_network = Genie.Renderer.vars(:tensor_network),
     quantum_measurement = Genie.Renderer.vars(:quantum_measurement),
-    context = Genie.Renderer.vars(:context),
     symmetry_rho_path = Genie.Renderer.vars(:symmetry_rho_path),
     symmetry_correlation_path = Genie.Renderer.vars(:symmetry_correlation_path),
     hamiltonain_measurement = Genie.Renderer.vars(:hamiltonain_measurement),
     dense_correlation_path = Genie.Renderer.vars(:dense_correlation_path),
+    context = Genie.Renderer.vars(:context),
     alert_message = Genie.Renderer.vars(:alert_message),
     dense_rho_path = Genie.Renderer.vars(:dense_rho_path),
 )
@@ -93,13 +93,6 @@ function func_c6e4cd882861547e7afdb7b84b6c3c5751b17861(;
                     htmlsourceindent = "3",
                 ) do
                     [
-                        """<!--  
-                                    <form 
-                                        action="/runalgs"
-                                        method="POST"
-                                        enctype="multipart/form-data"
-                                        onsubmit="btnSubmit.disabled = true; loading(); return true;"
-                                    >  -->"""
                         Genie.Renderer.Html.form(
                             method = "POST",
                             enctype = "multipart/form-data",
