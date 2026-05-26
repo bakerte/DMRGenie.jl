@@ -9,4 +9,4 @@ DMRGenie is a web interface for tensor network operations built on top of the DM
 
 ## DMRJtensor and TensorPACK Developers
 
-- [Thomas E. Baker](https://github.com/bakerte), Departments of Physics & Astronomy and Chemistry, University of Victoria, Canada
+- [Thomas E. Baker](https://github.com/bakerte), Departments of Physics and Astronomy and Chemistry, University of Victoria, Canada
