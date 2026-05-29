@@ -74,8 +74,9 @@ module TensorNetworksController
   end
 
   function DMRGenie(tensor_network)
-    # Safety - TODO - Improve
-    if (tensor_network.num_tensors < 3)
+    if (tensor_network.num_tensors < 3) || (tensor_network.num_tensors > 20)
+      # This case prevents MPOs that are too small or too large for the server to handle
+
       # Initialize variables
       hamiltonain_measurement = NaN
       dense_rho = nothing
