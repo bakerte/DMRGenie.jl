@@ -26,7 +26,7 @@ Bundled matrix product states represent low-energy excitations faithfully.
 Thomas~E Baker and Martin~P Thompson.
 Build your own tensor network library: Dmrjulia i. basic library for the
   density matrix renormalization group.
-{\em arXiv preprint arXiv:2109.03120}, 2021.
+{\em ArXiv Preprint}, 2021.
 \href{http://dx.doi.org/10.48550/arXiv.2109.03120}{doi:10.48550/arXiv.2109.03120}.
 
 \bibitem{fradkin2013field}
@@ -51,24 +51,24 @@ Renormalization-group approach to the anderson model of dilute magnetic alloys.
 Michael Levin and Cody~P Nave.
 Tensor renormalization group approach to two-dimensional classical lattice
   models.
-{\em Physical review letters}, 99(12):120601, 2007.
+{\em Physical Review Letters}, 99(12):120601, 2007.
 \href{http://dx.doi.org/10.1103/physrevlett.99.120601}{doi:10.1103/physrevlett.99.120601}.
 
 \bibitem{nielsen2010quantum}
 Michael~A Nielsen and Isaac~L Chuang.
 {\em Quantum computation and quantum information}.
-Cambridge university press, 2010.
+Cambridge University Press, 2010.
 \href{http://dx.doi.org/10.1017/CBO9780511976667}{doi:10.1017/CBO9780511976667}.
 
 \bibitem{penrose1971angular}
 Roger Penrose.
 Angular momentum: an approach to combinatorial space-time.
-{\em Quantum theory and beyond}, 151, 1971.
+{\em Quantum Theory and Beyond}, 151, 1971.
 
 \bibitem{press1992numerical}
 William~H Press, Saul~A Teukolsky, William~T Vetterling, and Brian~P Flannery.
 Numerical recipes in c++.
-{\em The art of scientific computing}, 1992.
+{\em The Art of Scientific Computing}, 1992.
 \href{http://dx.doi.org/10.1088/0143-0807/24/3/701}{doi:10.1088/0143-0807/24/3/701}.
 
 \bibitem{townsend2000modern}
@@ -81,7 +81,7 @@ University Science Books (Sausalito, California), 2000.
 Frank Verstraete and J~Ignacio Cirac.
 Renormalization algorithms for quantum-many body systems in two and higher
   dimensions.
-{\em arXiv preprint cond-mat/0407066}, 2004.
+{\em ArXiv Preprint}, 2004.
 \href{http://dx.doi.org/10.48550/arXiv.cond-mat/0407066}{doi:10.48550/arXiv.cond-mat/0407066}.
 
 \bibitem{verstraete2006matrix}
@@ -94,7 +94,7 @@ Matrix product states represent ground states faithfully.
 \bibitem{vidal2007entanglement}
 Guifre Vidal.
 Entanglement renormalization.
-{\em Physical review letters}, 99(22):220405, 2007.
+{\em Physical Review Letters}, 99(22):220405, 2007.
 \href{http://dx.doi.org/10.1103/PhysRevLett.99.220405}{doi:10.1103/PhysRevLett.99.220405}.
 
 \bibitem{wilson1983renormalization}
