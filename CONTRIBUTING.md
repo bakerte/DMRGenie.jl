@@ -1,6 +1,7 @@
 # Contributing
 
-DMRGenie is an open source project licensed under the GNU license. Contributions are welcomed such that contributors certify that their modifications are in accordance with *Developer Certificate of Origin (Version 1.1)* below. 
+DMRGenie is an open source project licensed under the GNU license. Contributions are welcomed such that contributors certify that their modifications are in accordance with *Developer Certificate of Origin (Version 1.1)* below. To report any issues with the software one may contact the repository owner [@bakerte](https://github.com/bakerte) or open a github issue. Users requiring support with the application are requested to direct correspondence with [@Aaron-Dayton](https://github.com/Aaron-Dayton) for assistance.
+
 
 
 ## Developer Certificate of Origin (Version 1.1)
