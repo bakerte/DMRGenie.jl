@@ -5,34 +5,34 @@ The style file: juliacon.bst
 Database file #1: ref.bib
 You've used 17 entries,
             2314 wiz_defined-function locations,
-            630 strings with 6779 characters,
-and the built_in function-call counts, 4859 in all, are:
-= -- 467
+            634 strings with 6887 characters,
+and the built_in function-call counts, 4923 in all, are:
+= -- 475
 > -- 209
 < -- 0
 + -- 85
 - -- 66
-* -- 307
-:= -- 850
-add.period$ -- 60
+* -- 323
+:= -- 858
+add.period$ -- 64
 call.type$ -- 17
 change.case$ -- 81
 chr.to.int$ -- 0
 cite$ -- 17
-duplicate$ -- 197
-empty$ -- 426
+duplicate$ -- 201
+empty$ -- 430
 format.name$ -- 66
-if$ -- 1022
+if$ -- 1034
 int.to.chr$ -- 0
 int.to.str$ -- 17
 missing$ -- 17
-newline$ -- 97
+newline$ -- 101
 num.names$ -- 34
 pop$ -- 106
 preamble$ -- 1
 purify$ -- 67
 quote$ -- 0
-skip$ -- 131
+skip$ -- 127
 stack$ -- 0
 substring$ -- 183
 swap$ -- 17
@@ -43,4 +43,4 @@ type$ -- 62
 warning$ -- 0
 while$ -- 41
 width$ -- 19
-write$ -- 197
+write$ -- 205

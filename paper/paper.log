@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  29 MAY 2026 12:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  12 JUN 2026 13:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,48 +620,69 @@ Underfull \hbox (badness 4467) in paragraph at lines 9--12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--47
+Underfull \hbox (badness 1515) in paragraph at lines 26--31
+[]\T1/ptm/m/n/9 Thomas E Baker and Mar-tin P Thomp-son. Build your
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+[]\T1/ptm/m/n/9 Eduardo Frad-kin. \T1/ptm/m/it/9 Field the-o-ries of con-densed
+ mat-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+\T1/ptm/m/it/9 ter physics\T1/ptm/m/n/9 . Cam-bridge Uni-ver-sity Press, 2013.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 []\T1/ptm/m/n/9 HR Krishna-Murthy, JW Wilkins, and KG Wil-son.
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 42--47
+Underfull \hbox (badness 2285) in paragraph at lines 44--49
 \T1/ptm/m/n/9 Renormalization-group ap-proach to the an-der-son model
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 42--47
+Underfull \hbox (badness 3849) in paragraph at lines 44--49
 \T1/ptm/m/n/9 of di-lute mag-netic al-loys. i. static prop-er-ties for the
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 42--47
+Underfull \hbox (badness 2653) in paragraph at lines 44--49
 \T1/ptm/m/n/9 sym-met-ric case. \T1/ptm/m/it/9 Phys-i-cal Re-view B\T1/ptm/m/n/
 9 , 21(3):1003, 1980.
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 49--54
+Underfull \hbox (badness 1983) in paragraph at lines 51--56
 []\T1/ptm/m/n/9 Michael Levin and Cody P Nave. Ten-sor renor-mal-iza-
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 49--54
+Underfull \hbox (badness 4582) in paragraph at lines 51--56
 \T1/ptm/m/n/9 tion group ap-proach to two-dimensional clas-si-cal lat-
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 84--89
+Underfull \hbox (badness 2556) in paragraph at lines 81--86
+\T1/ptm/m/n/9 go-rithms for quantum-many body sys-tems in two and
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 88--93
 []\T1/ptm/m/n/9 Frank Ver-straete and J Ig-na-cio Cirac. Ma-trix prod-uct
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
 []\T1/ptm/m/n/9 Guifre Vi-dal. En-tan-gle-ment renor-mal-iza-tion.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
 \T1/ptm/m/it/9 Phys-i-cal re-view let-ters\T1/ptm/m/n/9 , 99(22):220405, 2007.
  []
 
@@ -756,7 +777,7 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  14705 strings out of 476025
  225311 string characters out of 5790017
- 1881388 words of memory out of 5000000
+ 1882388 words of memory out of 5000000
  34838 multiletter control sequences out of 15000+600000
  559509 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -779,10 +800,10 @@ sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr
 /local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 613828 bytes).
+Output written on paper.pdf (8 pages, 614253 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
+ 400 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
  86 named destinations out of 1000 (max. 500000)
  298 words of extra memory for PDF output out of 10000 (max. 10000000)
 
