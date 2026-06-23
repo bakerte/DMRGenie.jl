@@ -1,9 +1,14 @@
+if !(v"1.9.0" <= VERSION < v"1.10.0")
+    error("Strict Environment Check Failed: DMRGenie requires Julia v1.9.x. You are running v$VERSION.")
+end
+
 import Pkg
 Pkg.instantiate()
 Pkg.activate(".")
 
 using Genie
 Genie.loadapp()
+
 
 if Sys.islinux()
     run(`xdg-open http://127.0.0.1:8000`)

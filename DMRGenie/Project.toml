@@ -22,3 +22,7 @@ UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 [compat]
 Genie = "=5.18"
 HTTP = "=1.9"
+
+julia = "=1.9.3"
+DMRJtensor = "=0.11.4"
+TensorPACK = "=0.5.2"
