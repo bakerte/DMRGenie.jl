@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  17 JUN 2026 11:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  23 JUN 2026 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -444,6 +444,8 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 18.
+
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
@@ -452,24 +454,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -501,7 +503,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 10.
+Package hyperref Info: Link coloring ON on input line 21.
 
 (./paper.out) (./paper.out)
 \@outlinefile=\write3
@@ -514,43 +516,43 @@ Package caption Info: End \AtBeginDocument code.
 <logojuliacon.pdf, id=140, 430.91032pt x 145.96547pt>
 File: logojuliacon.pdf Graphic file (type pdf)
 <use logojuliacon.pdf>
-Package pdftex.def Info: logojuliacon.pdf  used on input line 14.
+Package pdftex.def Info: logojuliacon.pdf  used on input line 25.
 (pdftex.def)             Requested size: 72.26999pt x 24.4797pt.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 14
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 25
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 14.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 25.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 14.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 25.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 31.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 31.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 42.
 <FIGs//diagram.png, id=146, 774.895pt x 494.84875pt>
 File: FIGs//diagram.png Graphic file (type png)
 <use FIGs//diagram.png>
-Package pdftex.def Info: FIGs//diagram.png  used on input line 34.
+Package pdftex.def Info: FIGs//diagram.png  used on input line 45.
 (pdftex.def)             Requested size: 240.0pt x 153.25806pt.
 <FIGs//network.png, id=151, 1116.17pt x 520.94624pt>
 File: FIGs//network.png Graphic file (type png)
 <use FIGs//network.png>
-Package pdftex.def Info: FIGs//network.png  used on input line 47.
+Package pdftex.def Info: FIGs//network.png  used on input line 58.
 (pdftex.def)             Requested size: 240.0pt x 112.0092pt.
 
 Underfull \vbox (badness 2538) has occurred while \output is active []
@@ -567,6 +569,14 @@ Non-PDF special ignored!
 
 
  <./logojuliacon.pdf> <./FIGs//diagram.png>]
+Underfull \hbox (badness 7907) in paragraph at lines 76--77
+[]\T1/ptm/m/n/9 We will first dis-cuss the back-ground soft-ware (DM-R-ju-
+ []
+
+
+Underfull \vbox (badness 7504) has occurred while \output is active []
+
+
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
 
 
@@ -576,11 +586,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
  <./FIGs//network.png>]
-<FIGs//HeisenbergModel.png, id=217, 288.07625pt x 619.31375pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<FIGs//HeisenbergModel.png, id=220, 288.07625pt x 619.31375pt>
 File: FIGs//HeisenbergModel.png Graphic file (type png)
 <use FIGs//HeisenbergModel.png>
-Package pdftex.def Info: FIGs//HeisenbergModel.png  used on input line 129.
+Package pdftex.def Info: FIGs//HeisenbergModel.png  used on input line 140.
 (pdftex.def)             Requested size: 144.03777pt x 309.65611pt.
+
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
 
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
 
@@ -590,16 +605,15 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [3]
-<FIGs//contraction.png, id=232, 1245.65375pt x 758.835pt>
+<FIGs//contraction.png, id=235, 1245.65375pt x 758.835pt>
 File: FIGs//contraction.png Graphic file (type png)
 <use FIGs//contraction.png>
-Package pdftex.def Info: FIGs//contraction.png  used on input line 157.
+Package pdftex.def Info: FIGs//contraction.png  used on input line 168.
 (pdftex.def)             Requested size: 240.0pt x 146.19487pt.
 
-Underfull \vbox (badness 7433) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- (./bib.tex
-(./paper.bbl
+
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
 
 
@@ -607,16 +621,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
   \T1/ptm/m/n/9 4
  []
 
-[4 <./FIGs//HeisenbergModel.png> <./FIGs//contraction.png>]
+[4 <./FIGs//HeisenbergModel.png> <./FIGs//contraction.png>] (./bib.tex
+(./paper.bbl
 Underfull \hbox (badness 7685) in paragraph at lines 4--7
-[]\T1/ptm/m/n/9 Thomas E. Baker. DM-R-ju-lia. []$\T1/cmtt/m/n/9 https : / / git
-hub . com /
+[]\T1/ptm/m/n/9 Thomas E. Baker. DM-R-ju-lia. [][]$\T1/cmtt/m/n/9 https : / / g
+ithub . com /
  []
 
 
 Underfull \hbox (badness 4467) in paragraph at lines 9--12
-[]\T1/ptm/m/n/9 Thomas E. Baker. TEN-PACK. []$\T1/cmtt/m/n/9 https : / / github
- . com /
+[]\T1/ptm/m/n/9 Thomas E. Baker. TEN-PACK. [][]$\T1/cmtt/m/n/9 https : / / gith
+ub . com /
  []
 
 
@@ -684,7 +699,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--99
 
 ))
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 225.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 236.
 
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
 
@@ -694,42 +709,45 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [5]
-Underfull \hbox (badness 1603) in paragraph at lines 262--263
+Underfull \hbox (badness 1603) in paragraph at lines 273--274
 []\T1/ptm/m/n/9 Any func-tions called us-ing Re-act-Flow are of the form \T1/pt
 m/b/n/9 Re-
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 262--263
+Underfull \hbox (badness 1552) in paragraph at lines 273--274
 \T1/ptm/b/n/9 act-Flow.FunctionName()\T1/ptm/m/n/9 . This was due to an is-sue 
 im-port-
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 262--263
+Underfull \hbox (badness 5008) in paragraph at lines 273--274
 \T1/ptm/m/n/9 ing Re-act-Flow into the Ge-nie en-vi-ron-ment. It should be
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 262--263
+Underfull \hbox (badness 1577) in paragraph at lines 273--274
 \T1/ptm/m/n/9 noted that all the Re-act-Flow el-e-ments should be in-side the
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 266--267
+Underfull \hbox (badness 4291) in paragraph at lines 277--278
 \T1/ptm/m/n/9 The net-work can-vas is where the ten-sor net-work is dis-
  []
 
 
-Underfull \hbox (badness 3612) in paragraph at lines 266--267
+Underfull \hbox (badness 3612) in paragraph at lines 277--278
 \T1/ptm/m/n/9 played. The cur-rent can-vas is pro-vided by the Re-act-Flow
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 266--267
+Underfull \hbox (badness 3009) in paragraph at lines 277--278
 \T1/ptm/m/n/9 pack-age. The net-work can-vas is a \T1/ptm/b/n/9 div \T1/ptm/m/n
 /9 el-e-ment in-side the
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
@@ -740,6 +758,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [6]
+Underfull \vbox (badness 2941) has occurred while \output is active []
+
+
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
 
 
@@ -762,10 +783,10 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 1FA4181E3B1968CD05E70A9504B026A1;4738.
  ) 
 Here is how much of TeX's memory you used:
- 14705 strings out of 476025
- 225311 string characters out of 5790017
+ 14707 strings out of 476025
+ 225344 string characters out of 5790017
  1881388 words of memory out of 5000000
- 34838 multiletter control sequences out of 15000+600000
+ 34840 multiletter control sequences out of 15000+600000
  559509 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,13n,90p,1221b,1815s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -787,10 +808,10 @@ sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr
 /local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 613272 bytes).
+Output written on paper.pdf (8 pages, 614245 bytes).
 PDF statistics:
- 401 PDF objects out of 1000 (max. 8388607)
- 340 compressed objects within 4 object streams
+ 404 PDF objects out of 1000 (max. 8388607)
+ 343 compressed objects within 4 object streams
  86 named destinations out of 1000 (max. 500000)
  298 words of extra memory for PDF output out of 10000 (max. 10000000)
 

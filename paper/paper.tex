@@ -6,6 +6,17 @@
 \usepackage{amsmath}
 \graphicspath{{FIGs/}}
 
+\usepackage{xcolor} % Enables advanced color management
+\usepackage{hyperref} % Enables hyperlinks
+
+\hypersetup{
+    colorlinks=true,  % Switches from boxes to colored text
+    linkcolor=blue,   % Color for internal links (sections, figures, TOC)
+    citecolor=red,  % Color for bibliographical citations
+    urlcolor=cyan,    % Color for external web URLs
+    filecolor=magenta % Color for local files
+}
+
 
 \begin{document}
 
@@ -62,9 +73,9 @@ Building these algorithms from a purely diagrammatic level would be useful. This
 
 Julia's solution of the two-level problem allows for an easy implementation of algorithms and simultaneous fast execution of scientific code. We discuss in this article efforts to construct a fully working scientific software package for entanglement renormalization that is simultaneously fast and lightweight. This software package has then been extended to include a user interface that allows for the graphical construction of algorithms without any coding background, our principle goal here.
 
-We will first discuss the background software (DMRjulia and TENPACK; available in Julia's package system as {\tt DMRJtensor} and {\tt TensorPACK}) originally developed in 2016 and first introduced to Github in 2020 and full debut on the Julia package environment in 2021. This means that the library has spanned many version of the Julia version starting originally in v0.5 and now continuing to the present version (v1.11 at time of submission) and beyond. We believe that some choices from our implementation may be interesting to the broader community, although many of the improvements that were introduced here also independently appeared in Julia from other groups, showing that common issues are being encountered and handled in similar ways.
+We will first discuss the background software (DMRjulia \url{https://github.com/bakerte/DMRJtensor.jl} and TENPACK \url{https://github.com/bakerte/TensorPACK.jl}; available in Julia's package system as {\tt DMRJtensor} and {\tt TensorPACK}) originally developed in 2016 and first introduced to Github in 2020 and full debut on the Julia package environment in 2021. This means that the library has spanned many version of the Julia version starting originally in v0.5 and now continuing to the present version (v1.11 at time of submission) and beyond. We believe that some choices from our implementation may be interesting to the broader community, although many of the improvements that were introduced here also independently appeared in Julia from other groups, showing that common issues are being encountered and handled in similar ways.
 
-DMRGenie is the natural extension of the previously developed software which we debut here. This builds on top of DMRjulia to include a graphical interface for easy development of new algorithms. This is made publicly available through a web interface and available for use with some limitations on the maximum size of the tensors and enforce reasonable computational requirements \cite{dmrgenie}.
+DMRGenie (located at \url{https://dmrgenie.rs.uvic.ca/}) is the natural extension of the previously developed software which we debut here. This builds on top of DMRjulia to include a graphical interface for easy development of new algorithms. This is made publicly available through a web interface and available for use with some limitations on the maximum size of the tensors and enforce reasonable computational requirements \cite{dmrgenie}.
 
 
 
@@ -342,7 +353,7 @@ Adding new operations requires the frontend to produce an accurate representatio
 When an operation is done, it passes the name of the operation done and the JavaScript objects of the tensors and edges involved.
 
 \subsection{Chosen Conventions}
-	\textbf{invisible} nodes are \textbf{ALWAYS} the target node, never the source. Changing this will cause some errors in the code.
+\textbf{Invisible} nodes are \textbf{ALWAYS} the target node, never the source. Changing this will cause some errors in the code.
 
 \subsection{Additional Info}
 Multiple elements can be selected by \textbf{holding command+clicking}. React elements must start with a capital letter or errors may occur (this is a convention but it is easy to forget when learning)
