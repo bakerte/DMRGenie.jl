@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  23 JUN 2026 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  23 JUN 2026 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -513,7 +513,7 @@ Package hyperref Info: Link coloring ON on input line 21.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./header.tex)
-<logojuliacon.pdf, id=140, 430.91032pt x 145.96547pt>
+<logojuliacon.pdf, id=132, 430.91032pt x 145.96547pt>
 File: logojuliacon.pdf Graphic file (type pdf)
 <use logojuliacon.pdf>
 Package pdftex.def Info: logojuliacon.pdf  used on input line 25.
@@ -540,22 +540,22 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 25.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 42.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 42.
-<FIGs//diagram.png, id=146, 774.895pt x 494.84875pt>
+<FIGs//diagram.png, id=137, 774.895pt x 494.84875pt>
 File: FIGs//diagram.png Graphic file (type png)
 <use FIGs//diagram.png>
 Package pdftex.def Info: FIGs//diagram.png  used on input line 45.
 (pdftex.def)             Requested size: 240.0pt x 153.25806pt.
-<FIGs//network.png, id=151, 1116.17pt x 520.94624pt>
+<FIGs//network.png, id=142, 1116.17pt x 520.94624pt>
 File: FIGs//network.png Graphic file (type png)
 <use FIGs//network.png>
 Package pdftex.def Info: FIGs//network.png  used on input line 58.
 (pdftex.def)             Requested size: 240.0pt x 112.0092pt.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 61.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 65.
 
-Underfull \vbox (badness 2538) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -586,17 +586,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
  <./FIGs//network.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<FIGs//HeisenbergModel.png, id=220, 288.07625pt x 619.31375pt>
-File: FIGs//HeisenbergModel.png Graphic file (type png)
-<use FIGs//HeisenbergModel.png>
-Package pdftex.def Info: FIGs//HeisenbergModel.png  used on input line 140.
-(pdftex.def)             Requested size: 144.03777pt x 309.65611pt.
-
-Underfull \vbox (badness 1603) has occurred while \output is active []
-
-
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
 
 
@@ -605,13 +594,20 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [3]
-<FIGs//contraction.png, id=235, 1245.65375pt x 758.835pt>
+<FIGs//HeisenbergModel.png, id=222, 288.07625pt x 619.31375pt>
+File: FIGs//HeisenbergModel.png Graphic file (type png)
+<use FIGs//HeisenbergModel.png>
+Package pdftex.def Info: FIGs//HeisenbergModel.png  used on input line 170.
+(pdftex.def)             Requested size: 144.03777pt x 309.65611pt.
+<FIGs//contraction.png, id=229, 1245.65375pt x 758.835pt>
 File: FIGs//contraction.png Graphic file (type png)
 <use FIGs//contraction.png>
-Package pdftex.def Info: FIGs//contraction.png  used on input line 168.
+Package pdftex.def Info: FIGs//contraction.png  used on input line 200.
 (pdftex.def)             Requested size: 240.0pt x 146.19487pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1418) in paragraph at lines 216--217
+\T1/ptm/m/n/9 To set up and run DM-R-Ge-nie, one can sim-ply nav-i-gate to
+ []
 
 
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
@@ -621,8 +617,15 @@ Underfull \hbox (badness 10000) has occurred while \output is active
   \T1/ptm/m/n/9 4
  []
 
-[4 <./FIGs//HeisenbergModel.png> <./FIGs//contraction.png>] (./bib.tex
-(./paper.bbl
+[4 <./FIGs//HeisenbergModel.png>]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 221.
+
+Underfull \hbox (badness 3179) in paragraph at lines 228--229
+[]\T1/ptm/m/n/9 Then one may open the web-site lo-cally by nav-i-gat-ing to
+ []
+
+(./bib.tex (./paper.bbl
 Underfull \hbox (badness 7685) in paragraph at lines 4--7
 []\T1/ptm/m/n/9 Thomas E. Baker. DM-R-ju-lia. [][]$\T1/cmtt/m/n/9 https : / / g
 ithub . com /
@@ -683,6 +686,14 @@ Underfull \hbox (badness 3009) in paragraph at lines 51--56
  []
 
 
+Overfull \vbox (2.39996pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+  \T1/ptm/m/n/9 5
+ []
+
+[5 <./FIGs//contraction.png>]
 Underfull \hbox (badness 3333) in paragraph at lines 88--93
 []\T1/ptm/m/n/9 Frank Ver-straete and J Ig-na-cio Cirac. Ma-trix prod-uct
  []
@@ -698,56 +709,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--99
  []
 
 ))
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 236.
-
-Overfull \vbox (2.39996pt too high) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-  \T1/ptm/m/n/9 5
- []
-
-[5]
-Underfull \hbox (badness 1603) in paragraph at lines 273--274
+Underfull \hbox (badness 1603) in paragraph at lines 267--268
 []\T1/ptm/m/n/9 Any func-tions called us-ing Re-act-Flow are of the form \T1/pt
 m/b/n/9 Re-
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 273--274
+Underfull \hbox (badness 1552) in paragraph at lines 267--268
 \T1/ptm/b/n/9 act-Flow.FunctionName()\T1/ptm/m/n/9 . This was due to an is-sue 
 im-port-
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 273--274
+Underfull \hbox (badness 5008) in paragraph at lines 267--268
 \T1/ptm/m/n/9 ing Re-act-Flow into the Ge-nie en-vi-ron-ment. It should be
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 273--274
+Underfull \hbox (badness 1577) in paragraph at lines 267--268
 \T1/ptm/m/n/9 noted that all the Re-act-Flow el-e-ments should be in-side the
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 277--278
+Underfull \hbox (badness 4291) in paragraph at lines 271--272
 \T1/ptm/m/n/9 The net-work can-vas is where the ten-sor net-work is dis-
  []
 
 
-Underfull \hbox (badness 3612) in paragraph at lines 277--278
+Underfull \hbox (badness 3612) in paragraph at lines 271--272
 \T1/ptm/m/n/9 played. The cur-rent can-vas is pro-vided by the Re-act-Flow
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 277--278
+Underfull \hbox (badness 3009) in paragraph at lines 271--272
 \T1/ptm/m/n/9 pack-age. The net-work can-vas is a \T1/ptm/b/n/9 div \T1/ptm/m/n
 /9 el-e-ment in-side the
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
@@ -758,7 +755,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [6]
-Underfull \vbox (badness 2941) has occurred while \output is active []
+Underfull \vbox (badness 3746) has occurred while \output is active []
+
+
+Underfull \vbox (badness 3965) has occurred while \output is active []
 
 
 Overfull \vbox (2.39996pt too high) has occurred while \output is active []
@@ -780,14 +780,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ] (./paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 1FA4181E3B1968CD05E70A9504B026A1;4738.
+(rerunfilecheck)             Checksum: 1F7C1EAC0AB71606AA64E96E5D24A97E;4687.
  ) 
 Here is how much of TeX's memory you used:
- 14707 strings out of 476025
- 225344 string characters out of 5790017
- 1881388 words of memory out of 5000000
- 34840 multiletter control sequences out of 15000+600000
- 559509 words of font info for 124 fonts, out of 8000000 for 9000
+ 14699 strings out of 476025
+ 225237 string characters out of 5790017
+ 1875388 words of memory out of 5000000
+ 34839 multiletter control sequences out of 15000+600000
+ 556661 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,13n,90p,1221b,1815s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
@@ -808,10 +808,10 @@ sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr
 /local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 614245 bytes).
+Output written on paper.pdf (8 pages, 615642 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 343 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
- 298 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

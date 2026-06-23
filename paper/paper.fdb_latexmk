@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex paper"] 1782256888 "paper.aux" "paper.bbl" "paper" 1782256889 0
+["bibtex paper"] 1782258653 "paper.aux" "paper.bbl" "paper" 1782258721 0
   "./juliacon.bst" 1736447129 20997 2eaa317b2b3889daf19a84ad3db6071a ""
   "./ref.bib" 1781306516 4672 b373c65b36aa682860054119e161899b ""
-  "paper.aux" 1782256889 8365 6b23b40d16b9d54bcd62af228964d2e6 "pdflatex"
+  "paper.aux" 1782258721 8240 15ecc0ddd5696dfc22839b6fcc63c5a8 "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1782256888 "/Users/aarondayton/repos/DMRGenie.jl/paper/paper.tex" "paper.pdf" "paper" 1782256889 0
-  "/Users/aarondayton/repos/DMRGenie.jl/paper/paper.tex" 1782256885 55032 353af04618c75f5e7ddb7240947e0155 ""
+["pdflatex"] 1782258720 "/Users/aarondayton/repos/DMRGenie.jl/paper/paper.tex" "paper.pdf" "paper" 1782258721 0
+  "/Users/aarondayton/repos/DMRGenie.jl/paper/paper.tex" 1782258717 54998 bdf2468f7c076fd54c3523f0c5b7207e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -166,10 +166,10 @@
   "journal_dat.tex" 1736447129 150 e8f5f0ce758e2580b918922de6715366 ""
   "juliacon.cls" 1736447129 30597 785899b4e284a01edd6bca4c84b3467c ""
   "logojuliacon.pdf" 1736447129 4937 0cb75c4e65b0cf72a69c7716f140efe5 ""
-  "paper.aux" 1782256889 8365 6b23b40d16b9d54bcd62af228964d2e6 "pdflatex"
-  "paper.bbl" 1782256888 3968 986601ebc0130d43ff61d7fd8af775b5 "bibtex paper"
-  "paper.out" 1782256889 4738 1fa4181e3b1968cd05e70a9504b026a1 "pdflatex"
-  "paper.tex" 1782256885 55032 353af04618c75f5e7ddb7240947e0155 ""
+  "paper.aux" 1782258721 8240 15ecc0ddd5696dfc22839b6fcc63c5a8 "pdflatex"
+  "paper.bbl" 1782258654 3968 986601ebc0130d43ff61d7fd8af775b5 "bibtex paper"
+  "paper.out" 1782258721 4687 1f7c1eac0ab71606aa64e96e5d24a97e "pdflatex"
+  "paper.tex" 1782258717 54998 bdf2468f7c076fd54c3523f0c5b7207e ""
   (generated)
   "paper.aux"
   "paper.log"
