@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex paper"] 1782322307 "paper.aux" "paper.bbl" "paper" 1782322309 0
+["bibtex diff"] 1782259910 "diff.aux" "diff.bbl" "diff" 1782259912 0
   "./juliacon.bst" 1736447129 20997 2eaa317b2b3889daf19a84ad3db6071a ""
   "./ref.bib" 1781306516 4672 b373c65b36aa682860054119e161899b ""
-  "paper.aux" 1782322309 8255 0958909c60c39cc177b2a5e3c73e877c "pdflatex"
+  "diff.aux" 1782259911 9355 3efaff5e0b452d346299430be9b30938 "pdflatex"
   (generated)
-  "paper.bbl"
-  "paper.blg"
+  "diff.bbl"
+  "diff.blg"
   (rewritten before read)
-["pdflatex"] 1782322308 "/Users/aarondayton/repos/DMRGenie.jl/paper/paper.tex" "paper.pdf" "paper" 1782322309 0
-  "/Users/aarondayton/repos/DMRGenie.jl/paper/paper.tex" 1782322305 55003 4aff0be0b4a8a5c8e14047e72f3438a2 ""
+["pdflatex"] 1782259910 "/Users/aarondayton/repos/DMRGenie.jl/paper/diff.tex" "diff.pdf" "diff" 1782259912 0
+  "/Users/aarondayton/repos/DMRGenie.jl/paper/diff.tex" 1782259901 65452 41c2ff12e7097277cace0aa78e6061cd ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -71,6 +71,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb" 1248133631 30212 b6aafa449db0097a6b9b890f66741063 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb" 1248133631 36510 24bd6e95867d9b5c2691bf9144a22cda ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pfb" 1248133631 5369 ef6fbc97fe26e2de3a88fd97ee387d64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb" 1248133631 10594 310261a6407d360eda1ed257d05cd4df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb" 1215737283 175641 e30a691dc1402b08fd6535cf8a31e5b7 ""
@@ -94,6 +95,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty" 1600895880 17859 4409f8f50cd365c68e684407e5350b1b ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty" 1576015897 19007 15924f7228aca6c6d184b115f4baa231 ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty" 1593379760 20089 80423eac55aa175305d35b49e04fe23b ""
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty" 1578692523 15682 94f55b803e160cf7fb6e4d77d07cfe1d ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty" 1576624663 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1359763108 13829 94730e64147574077f8ecfea9bb69af4 ""
@@ -161,18 +163,18 @@
   "FIGs//diagram.png" 1736447129 94623 dde67c8ef4e89c6efb96ec703746001b ""
   "FIGs//network.png" 1736447129 133701 5b837a56ce99a0f5b458c86828edf6ed ""
   "bib.tex" 1736447129 111 fb8dcbd9d4481bde59a06a28ec8a83ca ""
+  "diff.aux" 1782259911 9355 3efaff5e0b452d346299430be9b30938 "pdflatex"
+  "diff.bbl" 1782259910 3968 986601ebc0130d43ff61d7fd8af775b5 "bibtex diff"
+  "diff.out" 1782259911 4899 bf046646bde773efee8251d1266a5154 "pdflatex"
+  "diff.tex" 1782259901 65452 41c2ff12e7097277cace0aa78e6061cd ""
   "header.tex" 1779749643 1048 1a7603e4e0c3cef3cea05f5480476cc6 ""
   "jlcode.sty" 1736447129 18247 c7ed2bfdf5b1011566e15a16b8dc985b ""
   "journal_dat.tex" 1736447129 150 e8f5f0ce758e2580b918922de6715366 ""
   "juliacon.cls" 1736447129 30597 785899b4e284a01edd6bca4c84b3467c ""
   "logojuliacon.pdf" 1736447129 4937 0cb75c4e65b0cf72a69c7716f140efe5 ""
-  "paper.aux" 1782322309 8255 0958909c60c39cc177b2a5e3c73e877c "pdflatex"
-  "paper.bbl" 1782322308 3968 986601ebc0130d43ff61d7fd8af775b5 "bibtex paper"
-  "paper.out" 1782322309 4700 9dea5a17d147fad07e621d37ed9f87a6 "pdflatex"
-  "paper.tex" 1782322305 55003 4aff0be0b4a8a5c8e14047e72f3438a2 ""
   (generated)
-  "paper.aux"
-  "paper.log"
-  "paper.out"
-  "paper.pdf"
+  "diff.aux"
+  "diff.log"
+  "diff.out"
+  "diff.pdf"
   (rewritten before read)

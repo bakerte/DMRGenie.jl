@@ -1,22 +1,64 @@
 
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL file_for_diff.tex   Tue Jun 23 17:11:19 2026
+%DIF ADD paper.tex           Tue Jun 23 17:11:16 2026
 % JuliaCon proceedings template
 \documentclass{juliacon}
 \setcounter{page}{1}
 
 \usepackage{amsmath}
 \graphicspath{{FIGs/}}
-
-\usepackage{xcolor} % Enables advanced color management
-\usepackage{hyperref} % Enables hyperlinks
-
-\hypersetup{
-    colorlinks=true,  % Switches from boxes to colored text
-    linkcolor=blue,   % Color for internal links (sections, figures, TOC)
-    citecolor=red,  % Color for bibliographical citations
-    urlcolor=cyan,    % Color for external web URLs
-    filecolor=magenta % Color for local files
-}
-
+ %DIF > 
+\usepackage{xcolor} % Enables advanced color management %DIF > 
+\usepackage{hyperref} % Enables hyperlinks %DIF > 
+ %DIF > 
+\hypersetup{ %DIF > 
+    colorlinks=true,  % Switches from boxes to colored text %DIF > 
+    linkcolor=blue,   % Color for internal links (sections, figures, TOC) %DIF > 
+    citecolor=red,  % Color for bibliographical citations %DIF > 
+    urlcolor=cyan,    % Color for external web URLs %DIF > 
+    filecolor=magenta % Color for local files %DIF > 
+} %DIF > 
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 
@@ -39,7 +81,21 @@ The Julia programming language is a good if not great attempt to solve this two-
 
 In any scientific endeavour, the need to use numerical techniques is highly necessary. And for new advances to be made, new methods must be able to be implemented into any given language to evolve beyond the state-of-the-art. For anyone developing new algorithms, the need for a programming framework that enables as many solutions of the two-language problem as possible is necessary, making Julia a strong contender for algorithmic development.
 
-Quantum information has become a tantalizing path to creating new algorithms and methods. These range from quantum algorithms implemented on quantum computers \cite{nielsen2010quantum} to entanglement renormalization techniques. This class of methods is more commonly referred to as tensor networks, simply, but with the rise of machine-learning and other methods particularly in quantum chemistry that are formulated on tensor networks, a distinguishing name is required. We choose to expand the usage of the term from Ref.~\cite{vidal2007entanglement} since all methods are fundamentally optimizing over quantities relevant for quantum information ({\it i.e.}, the entanglement) and renormalization was originally introduced to describe this class of methods \cite{wilson1983renormalization,krishna1980renormalization}. The methods required to implement an algorithm in this context is different from other uses, notably machine learning.
+Quantum information has become a tantalizing path to creating new algorithms and methods. These range from quantum algorithms implemented on quantum computers \cite{nielsen2010quantum} to entanglement renormalization techniques. \DIFdelbegin \footnote{\DIFdel{This class of methods is more commonly referred to as tensor networks, simply, but with the rise of machine-learning and other methods particularly in quantum chemistry that are formulated on tensor networks, a distinguishing name is required. We choose to expand the usage of the term from Ref.~\mbox{%DIFAUXCMD
+\cite{vidal2007entanglement} }\hskip0pt%DIFAUXCMD
+since all methods are fundamentally optimizing over quantities relevant for quantum information (}%DIFDELCMD < {\it %%%
+\DIFdel{i.e.}%DIFDELCMD < }%%%
+\DIFdel{, the entanglement) and renormalization was originally introduced to describe this class of methods \mbox{%DIFAUXCMD
+\cite{wilson1983renormalization,krishna1980renormalization}}\hskip0pt%DIFAUXCMD
+. The methods required to implement an algorithm in this context is different from other uses, notably machine learning.}} 
+%DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{This class of methods is more commonly referred to as tensor networks, simply, but with the rise of machine-learning and other methods particularly in quantum chemistry that are formulated on tensor networks, a distinguishing name is required. We choose to expand the usage of the term from Ref.~\mbox{%DIFAUXCMD
+\cite{vidal2007entanglement} }\hskip0pt%DIFAUXCMD
+since all methods are fundamentally optimizing over quantities relevant for quantum information (}{\it \DIFadd{i.e.}}\DIFadd{, the entanglement) and renormalization was originally introduced to describe this class of methods \mbox{%DIFAUXCMD
+\cite{wilson1983renormalization,krishna1980renormalization}}\hskip0pt%DIFAUXCMD
+. The methods required to implement an algorithm in this context is different from other uses, notably machine learning.
+}\DIFaddend 
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{diagram.png}
@@ -61,8 +117,8 @@ Methods of entanglement renormalization use quantities native to quantum informa
 }
 \end{figure}
 
-The use of the diagram notation is useful for representing large numbers of tensors in a coherent way without representing the full mathematical detail (see Fig.~\ref{network}). For example, the wavefunction when decomposed through a series of reshapes and singular value decompositions (SVD) takes the form of a matrix product state (MPS) \cite{bakerCJP21}.
-\begin{align}\nonumber
+The use of the diagram notation is useful for representing large numbers of tensors in a coherent way without representing the full mathematical detail (see Fig.~\ref{network}). For example, the wavefunction when decomposed through a series of reshapes and singular value decompositions (SVD) takes the form of a matrix product state (MPS) \cite{bakerCJP21}\DIFaddbegin \DIFadd{.
+}\DIFaddend \begin{align}\nonumber
 |\psi\rangle&=\sum_{\substack{\sigma_1\sigma_2\sigma_3\\\sigma_4\sigma_5\sigma_6}}\sum_{\substack{a_1a_2a_3\\a_4a_5}}A^{\sigma_1}_{a_1}A^{\sigma_2}_{a_1a_2}A^{\sigma_3}_{a_2a_3}A^{\sigma_4}_{a_3a_4}A^{\sigma_5}_{a_4a_5}A^{\sigma_6}_{a_5}\\
 &\quad\quad\quad\quad\quad\quad\quad\quad\times|\sigma_1\sigma_2\sigma_3\sigma_4\sigma_5\sigma_6\rangle
 \label{mpsform}
@@ -73,9 +129,9 @@ Building these algorithms from a purely diagrammatic level would be useful. This
 
 Julia's solution of the two-level problem allows for an easy implementation of algorithms and simultaneous fast execution of scientific code. We discuss in this article efforts to construct a fully working scientific software package for entanglement renormalization that is simultaneously fast and lightweight. This software package has then been extended to include a user interface that allows for the graphical construction of algorithms without any coding background, our principle goal here.
 
-We will first discuss the background software (DMRjulia \url{https://github.com/bakerte/DMRJtensor.jl} and TENPACK \url{https://github.com/bakerte/TensorPACK.jl}; available in Julia's package system as {\tt DMRJtensor} and {\tt TensorPACK}) originally developed in 2016 and first introduced to Github in 2020 and full debut on the Julia package environment in 2021. This means that the library has spanned many version of the Julia version starting originally in v0.5 and now continuing to the present version (v1.11 at time of submission) and beyond. We believe that some choices from our implementation may be interesting to the broader community, although many of the improvements that were introduced here also independently appeared in Julia from other groups, showing that common issues are being encountered and handled in similar ways.
+We will first discuss the background software (DMRjulia \DIFdelbegin \DIFdel{and TENPACK}\DIFdelend \DIFaddbegin \url{https://github.com/bakerte/DMRJtensor.jl} \DIFadd{and TENPACK }\url{https://github.com/bakerte/TensorPACK.jl}\DIFaddend ; available in Julia's package system as {\tt DMRJtensor} and {\tt TensorPACK}) originally developed in 2016 and first introduced to Github in 2020 and full debut on the Julia package environment in 2021. This means that the library has spanned many version of the Julia version starting originally in v0.5 and now continuing to the present version (v1.11 at time of submission) and beyond. We believe that some choices from our implementation may be interesting to the broader community, although many of the improvements that were introduced here also independently appeared in Julia from other groups, showing that common issues are being encountered and handled in similar ways.
 
-DMRGenie (located at \url{https://dmrgenie.rs.uvic.ca/}) is the natural extension of the previously developed software which we debut here. This builds on top of DMRjulia to include a graphical interface for easy development of new algorithms. This is made publicly available through a web interface and available for use with some limitations on the maximum size of the tensors and enforce reasonable computational requirements \cite{dmrgenie}.
+DMRGenie \DIFaddbegin \DIFadd{(located at }\url{https://dmrgenie.rs.uvic.ca/}\DIFadd{) }\DIFaddend is the natural extension of the previously developed software which we debut here. This builds on top of DMRjulia to include a graphical interface for easy development of new algorithms. This is made publicly available through a web interface and available for use with some limitations on the maximum size of the tensors and enforce reasonable computational requirements \cite{dmrgenie}.
 
 
 
@@ -112,38 +168,45 @@ The original hope for Julia was to solve the two-language problem, and that is s
 
 %but some of these developments are not forwarding that goal at least for our purposes. We do not question the implementation in standard Julia functions as this kind of drift towards more specific functions and rewriting some basic functions was bound to happen for a more specific use case. We merely point out that some of these features are different for this library.
 
-\section{Quantum symmetries}
+\DIFaddbegin \section{\DIFadd{Quantum symmetries}}
 \label{qsymmetries}
 
-TENPACK currently supports local $U(1)$ and $\mathbb{Z}_n$ symmetries. The basic idea is to establish the relevant quantum numbers on each physical index (drawn as the vertical index on the MPS). Specifying the quantum numbers on each of the physical indices is sufficient to determine the quantum numbers on all other indices, provided that the total flux of the input Hamiltonian is a net zero ({\it i.e.}, symmetry-preserving Hamiltonian). Given this case, all tensors exhibit a block structure, where each block has a set of non-zero values and no non-zero values are available between quantum number sectors.
+\DIFadd{TENPACK currently supports local $U(1)$ and $\mathbb{Z}_n$ symmetries. The basic idea is to establish the relevant quantum numbers on each physical index (drawn as the vertical index on the MPS). Specifying the quantum numbers on each of the physical indices is sufficient to determine the quantum numbers on all other indices, provided that the total flux of the input Hamiltonian is a net zero (}{\it \DIFadd{i.e.}}\DIFadd{, symmetry-preserving Hamiltonian). Given this case, all tensors exhibit a block structure, where each block has a set of non-zero values and no non-zero values are available between quantum number sectors.
+}
 
-Given a symmetry preserving Hamiltonian, one can use rules similar to Kirchoff's loop rules (with total flux equal to zero) to determine the quantum numbers on each index. All of this is automatically handled in the quantum number tensor implementation in TENPACK for abelian quantum numbers. 
+\DIFadd{Given a symmetry preserving Hamiltonian, one can use rules similar to Kirchoff's loop rules (with total flux equal to zero) to determine the quantum numbers on each index. All of this is automatically handled in the quantum number tensor implementation in TENPACK for abelian quantum numbers. 
+}
 
-For example, consider the Hamiltonian for two spin-half objects on two different sites
-\begin{equation}
-\mathbf{S}_1\cdot\mathbf{S}_2=\frac14\left(\begin{array}{cccc}
+\DIFadd{For example, consider the Hamiltonian for two spin-half objects on two different sites
+}\begin{equation}
+\DIFadd{\mathbf{S}_1\cdot\mathbf{S}_2=\frac{1}{4}\left(\begin{array}{cccc}
 1 & 0 & 0 & 0\\
 0 & -1 & 2 & 0\\
 0 & 2 & -1 & 0\\
 0 & 0 & 0 & 1\\
 \end{array}\right)
-\end{equation}
-where $\mathbf{S}=\boldsymbol{\sigma}/2$ for the Pauli vector $\boldsymbol{\sigma}$ \cite{townsend2000modern} and subscripts denote which site the spin vector is located. The matrix can be divided into three blocks, and in general, we can write a block structure of completely independent pieces as
-\begin{equation}
-\mathbf{S}_1\cdot\mathbf{S}_2=1\oplus\left(\begin{array}{cc}
+}\end{equation}
+\DIFadd{where $\mathbf{S}=\boldsymbol{\sigma}/2$ for the Pauli vector $\boldsymbol{\sigma}$ \mbox{%DIFAUXCMD
+\cite{townsend2000modern} }\hskip0pt%DIFAUXCMD
+and subscripts denote which site the spin vector is located. The matrix can be divided into three blocks, and in general, we can write a block structure of completely independent pieces as
+}\begin{equation}
+\DIFadd{\mathbf{S}_1\cdot\mathbf{S}_2=1\oplus\left(\begin{array}{cc}
 -1 & 2 \\
 2 & -1
 \end{array}\right)\oplus1
-\end{equation}
-where $\oplus$ is a direct sum. Each of these three independent pieces can be assigned a quantum number (+1, 0, -1; in order). This means that if we were to multiply this matrix with another matrix respecting the same symmetries, we could break the full matrix multiplication into parts. In this case, consider multiplying $\mathbf{S}_1\cdot\mathbf{S}_2$ by itself and noting that one could perform three matrix multiplications, one on each quantum number sector, and obtain the same result.
+}\end{equation}
+\DIFadd{where $\oplus$ is a direct sum. Each of these three independent pieces can be assigned a quantum number (+1, 0, -1; in order). This means that if we were to multiply this matrix with another matrix respecting the same symmetries, we could break the full matrix multiplication into parts. In this case, consider multiplying $\mathbf{S}_1\cdot\mathbf{S}_2$ by itself and noting that one could perform three matrix multiplications, one on each quantum number sector, and obtain the same result.
+}
 
-This idea generalizes to all tensors that respect a quantum number symmetry. When reshaping an index, one can simply sum the abelian quantum numbers together to find the quantum number on the resulting grouped index. Eventually, one will need to contract a tensor. By identifying which indices are contracted and which are not, one can reshape any tensor into a matrix that must be divisible into quantum number blocks.
+\DIFadd{This idea generalizes to all tensors that respect a quantum number symmetry. When reshaping an index, one can simply sum the abelian quantum numbers together to find the quantum number on the resulting grouped index. Eventually, one will need to contract a tensor. By identifying which indices are contracted and which are not, one can reshape any tensor into a matrix that must be divisible into quantum number blocks.
+}
 
-The implementation in TENPACK has been optimized so that it is fast. This methodology also avoids any issue with numerical round-off error accidentally changing the desired quantum number sector for a given problem. For example, not imposing quantum number symmetries for fermions can lead to a loss or gaining a fermion, which may resulting in finding an answer for a different symmetry sector than was originally intended. It is recommended to use quantum number symmetries whenever the problem displays quantum numbers.
+\DIFadd{The implementation in TENPACK has been optimized so that it is fast. This methodology also avoids any issue with numerical round-off error accidentally changing the desired quantum number sector for a given problem. For example, not imposing quantum number symmetries for fermions can lead to a loss or gaining a fermion, which may resulting in finding an answer for a different symmetry sector than was originally intended. It is recommended to use quantum number symmetries whenever the problem displays quantum numbers.
+}
 
 
 
-\section{Graphical interface with DMRGenie}
+\DIFaddend \section{Graphical interface with DMRGenie}
 The DMRGenie graphical user interface (GUI) allows for tensor network algorithms to be run with minimal to no coding required, and using diagrams which are easier to read. DMRGenie consists of the Algorithm Runner and the Tensor Network Builder. The Algorithm Runner executes tensor network algorithms such as the density matrix renormalization group (DMRG) using known models or custom Hamiltonians \cite{dmrjulia1}. The Tensor Network Builder allows the user to build their own tensor network and create their own tensor network algorithm using a drag-and-drop system. The frontend was built using HTML, JavaScript, React, and CSS for styling. The backend uses a Model View Controller (MVC) infrastructure. The packages used to run the tensor network algorithms are DMRjulia and TENPACK. So, while both DMRjulia and TENPACK are 100\% from-scratch Julia implementations, DMRGenie is not, but this makes the code easier to use and work with and adapt to changing software standards in the future.
 
 \subsection{DMRGenie Backend}\label{backend}
@@ -159,7 +222,7 @@ The controller is responsible for starting up the HTML page with the relevant da
 Much of the data collection is handled in the routes. When a computation is submitted, the routes receives this request, parses through the data, then sends it in a usable format to the corresponding controller. Data is sent to the backend in a POST request and collected using the \texttt{postpayload} Genie function for the Algorithm Runner, while for the Tensor Network Builder it is sent as JSON then parsed using the JSON3 Julia package.
 
 \subsection{DMRGenie Frontend}
-The two main components of DMRGenie are the Tensor Network Builder and the algorithm runner. The frontend of DMRGenie was built using HTML, CSS, and JavaScript along with ReactJS. The only ReactJS component of the app was the Tensor Network Builder. ReactJS was used along with ReactFlow which is a package meant for building node-based editors and interactive diagrams. 
+The two main components of DMRGenie are the \DIFdelbegin \DIFdel{tensor network builder }\DIFdelend \DIFaddbegin \DIFadd{Tensor Network Builder }\DIFaddend and the algorithm runner. The frontend of DMRGenie was built using HTML, CSS, and JavaScript along with ReactJS. The only ReactJS component of the app was the Tensor Network Builder. ReactJS was used along with ReactFlow which is a package meant for building node-based editors and interactive diagrams. 
 
 \subsection{Algorithm Runner}
 The Algorithm Runner is an interface that allows the user to build their own models or run known models to get the ground state energy of the system. The number of sites for a system and its Hamiltonian must be specified. The current supplied Hamiltonians are for the Hubbard model, the $t-J$ model, and the Heisenberg model \cite{fradkin2013field}. Custom Hamiltonians can be built by the user by specifying the physical dimension of the system, the Hamiltonian constant, and the components of the Hamiltonian.
@@ -182,7 +245,7 @@ where $J$ is the Hamiltonian constant, then it would be possible to do so term b
 
 It is also possible to compute the correlations and impose symmetries on the system. The correlation matrix operators and correlation function operators must be specified to compute correlations. The matrix operators and function operators will then be evaluated at all positions on the lattice. 
 
-For details of the symmetries and how they need to be implemented, see~\ref{qsymmetries}.
+\DIFdelbegin \DIFdel{Details }\DIFdelend \DIFaddbegin \DIFadd{For details }\DIFaddend of the symmetries and how they need to be implemented \DIFdelbegin \DIFdel{are included in Appendix}\DIFdelend \DIFaddbegin \DIFadd{see}\DIFaddend ~\ref{qsymmetries}.
 
 
 
@@ -191,45 +254,58 @@ For details of the symmetries and how they need to be implemented, see~\ref{qsym
 
 The Tensor Network Builder is a drag and drop interface to build tensor networks. The rank of any tensor is specified before they are dropped onto the canvas. The number of connections points on a tensor is equal to the rank of the tensor. Indices can be created by dragging from a connection point on a tensor. It is possible to specify the name and dimension of all indices, and to rename an index if needed. Possible operations on tensors include contractions (see example of interface in Fig.~\ref{GUIcontraction}), singular value decompositions, eigenvalue decompositions, QR decompositions, and LQ decompositions. When the user is done, the "submit" button can be clicked and the algorithm will be run on the backend. The output of the algorithm will be the tensors that resulted from the last operation and will be given as a downloadable file.
 
-ReactJS is used for the Tensor Network Builder because of component reusability and the fast rendering. The ReactFlow package was designed to build node-based editors and interactive diagrams; however, graphs in computer science have similar structures to tensor networks. The nodes and edges in ReactFlow were generalized to tensors and indices. 
+ReactJS is used for the \DIFdelbegin \DIFdel{tensor network builder }\DIFdelend \DIFaddbegin \DIFadd{Tensor Network Builder }\DIFaddend because of component reusability and the fast rendering. The ReactFlow package was designed to build node-based editors and interactive diagrams; however, graphs in computer science have similar structures to tensor networks. The nodes and edges in ReactFlow were generalized to tensors and indices. 
 
-For details on how to use the Tensor Network Builder, see Appendix~\ref{builder}.
+\DIFaddbegin \DIFadd{For details on how to use the Tensor Network Builder, see Appendix~\ref{builder}.
+}
 
 
-\begin{figure}
+\DIFaddend \begin{figure}
     \includegraphics[width=\columnwidth]{contraction.png}
 \caption{Contraction two tensors with the Tensor Network Builder interface. a) The initial tensors. b) The input given to the contract menu operation. c) The output tensor. } \label{GUIcontraction}
 \end{figure}
 
-\section{Installation and usage}
+\DIFaddbegin \section{\DIFadd{Installation and usage}}
 
-The basic libraries for DMRjulia and TENPACK can be obtained from online repositories \cite{dmrjulia,tenpack} or from the Julia package environment:
-\begin{lstlisting}[language = Julia]
-julia> ]
-pkg> add DMRGenie DMRJtensor TensorPACK
+\DIFadd{The basic libraries for DMRjulia and TENPACK can be obtained from online repositories \mbox{%DIFAUXCMD
+\cite{dmrjulia,tenpack} }\hskip0pt%DIFAUXCMD
+or from the Julia package environment:
+}\DIFmodbegin
+\begin{lstlisting}[language = Julia,alsolanguage=DIFcode]
+%DIF > julia> ]
+%DIF > pkg> add DMRGenie DMRJtensor TensorPACK
 \end{lstlisting}
+\DIFmodend
 
-The DMRGenie GUI can be used online or locally by cloning the github repository~\cite{dmrgenie}. Note that if DMRGenie is used locally, then julia version $1.9.x$ is required.
+\DIFadd{The DMRGenie GUI can be used online or locally by cloning the github repository~\mbox{%DIFAUXCMD
+\cite{dmrgenie}}\hskip0pt%DIFAUXCMD
+. Note that if DMRGenie is used locally, then julia version $1.9.x$ is required.
+}
 
-\subsection{Setting Up and Running DMRGenie}
+\subsection{\DIFadd{Setting Up and Running DMRGenie}}
 
-To set up and run DMRGenie, one can simply navigate to {\tt DMRGenie.jl/DMRGenie} then run the script {\tt run.sh} from the command line.
+\DIFadd{To set up and run DMRGenie, one can simply navigate to }{\tt \DIFadd{DMRGenie.jl/DMRGenie}} \DIFadd{then run the script }{\tt \DIFadd{run.sh}} \DIFadd{from the command line.
+}
 
-The actual steps being taken are as follows:
+\DIFadd{The actual steps being taken are as follows:
+}
 
-\begin{lstlisting}[language = Julia]
-import Pkg
-Pkg.instantiate()
-Pkg.activate(".")
-julia> using Genie
-julia> Genie.loadapp()
+\DIFmodbegin
+\begin{lstlisting}[language = Julia,alsolanguage=DIFcode]
+%DIF > import Pkg
+%DIF > Pkg.instantiate()
+%DIF > Pkg.activate(".")
+%DIF > julia> using Genie
+%DIF > julia> Genie.loadapp()
 \end{lstlisting}
+\DIFmodend
 
-Then one may open the website locally by navigating to {\tt http://127.0.0.1:8000} in their browser.
+\DIFadd{Then one may open the website locally by navigating to }{\tt \DIFadd{http://127.0.0.1:8000}} \DIFadd{in their browser.
+}
 
 
 
-\section{Deployment}
+\DIFaddend \section{Deployment}
 %-uses resources supplied by the Research Computing services at the Unviersity of Victoria\\
 
 The application is packaged into a Docker container using GenieDeployDocker and Docker tools.  The container image is then pushed to a local image registry and scanned for vulnerabilities before deployment to a Kubernetes cluster, where it is made available on the web.  The registry,  cluster and web access are components of a self-serve application deployment platform.
@@ -238,7 +314,35 @@ The application is packaged into a Docker container using GenieDeployDocker and 
 
 A graphical user interface for entanglement renormalization has been presented here in DMRGenie. This builds upon the previous DMRjulia and TENPACK packages to make coding novel quantum algorithms far easier and more visual. 
 
-\section{Acknowledgement}
+\DIFdelbegin \section{\DIFdel{Installation and usage}}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The basic libraries for DMRjulia and TENPACK can be obtained from online repositories \mbox{%DIFAUXCMD
+\cite{dmrjulia,tenpack} }\hskip0pt%DIFAUXCMD
+or from the Julia package environment:
+}%DIFDELCMD < \begin{lstlisting}[language = Julia]
+%DIFDELCMD < %%%
+%DIFAUXCMD NEXT
+\DIFmodbegin
+\begin{lstlisting}[language = Julia,alsolanguage=DIFcode]
+%DIF < julia> ]
+%DIF < pkg> add DMRGenie DMRJtensor TensorPACK
+\end{lstlisting}
+\DIFmodend %DIFAUXCMD
+%DIFDELCMD < \end{lstlisting}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The DMRGenie GUI can be used online or locally by cloning the github repository~\mbox{%DIFAUXCMD
+\cite{dmrgenie}}\hskip0pt%DIFAUXCMD
+. Note that if DMRGenie is used locally, then julia version $1.9.x$ is required.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section{Acknowledgement}
 
 K.G.~acknowledges support from the Valerie Kuehne Undergraduate Research Award, the Undergraduate Student Research Award (USRA) from NSERC, and the Summer Emerging Undergraduate Award (SERA) from the Faculty of Science at the University of Victoria. 
 
@@ -260,9 +364,115 @@ This work was supported by the Digital Research Alliance of Canada.
 \begin{appendix}
 
 
-\section{Tensor Network Builder guide}\label{builder}
+\section{\DIFdelbegin \DIFdel{Running locally}\DIFdelend \DIFaddbegin \DIFadd{Tensor Network Builder guide}\DIFaddend }\DIFaddbegin \label{builder}
+\DIFaddend 
 
-The frontend for the Tensor Network Builder was built using HTML, CSS, JavaScript, and React. It is recommended that the developer has experience in these languages. The majority of the interface is coded in React, and the styling is done in CSS. The React package used is \textbf{ReactFlow}. This specific package was chosen because it is used to create graphs commonly found in computer science, and the package was well documented. Computer science graphs and tensor networks have quite a bit of overlap in their structure. The nodes and edges can easily be generalized to tensors and indices. The website has two main components: the network canvas and the drag and drop menu.
+\DIFdelbegin \DIFdel{DMRGenie can be run locally and we show how to do this here.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Setup}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Navigate to the `tensez` directory once the repository has been cloned and then into the `DMRGenie` folder within it.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Install the necessary packages with instantiate.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{lstlisting}[language = Julia]
+%DIFDELCMD < %%%
+%DIFAUXCMD NEXT
+\DIFmodbegin
+\begin{lstlisting}[language = Julia,alsolanguage=DIFcode]
+%DIF < julia> ] 
+%DIF < pkg> instantiate
+\end{lstlisting}
+\DIFmodend %DIFAUXCMD
+%DIFDELCMD < \end{lstlisting}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Running the App}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The app must be activated by running the following from the `DMRGenie` directory
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{lstlisting}[language = Julia]
+%DIFDELCMD < %%%
+%DIFAUXCMD NEXT
+\DIFmodbegin
+\begin{lstlisting}[language = Julia,alsolanguage=DIFcode]
+%DIF < julia> ] 
+%DIF < pkg> activate .
+%DIF < -
+%DIF < julia> using Genie
+%DIF < julia> Genie.loadapp()
+\end{lstlisting}
+\DIFmodend %DIFAUXCMD
+%DIFDELCMD < \end{lstlisting}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section{\DIFdel{Quantum symmetries}}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < \label{qsymmetries}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{TENPACK currently supports local $U(1)$ and $\mathbb{Z}_n$ symmetries. The basic idea is to establish the relevant quantum numbers on each physical index (drawn as the vertical index on the MPS). Specifying the quantum numbers on each of the physical indices is sufficient to determine the quantum numbers on all other indices, provided that the total flux of the input Hamiltonian is a net zero (}%DIFDELCMD < {\it %%%
+\DIFdel{i.e.}%DIFDELCMD < }%%%
+\DIFdel{, symmetry-preserving Hamiltonian). Given this case, all tensors exhibit a block structure, where each block has a set of non-zero values and no non-zero values are available between quantum number sectors.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Given a symmetry preserving Hamiltonian, one can use rules similar to Kirchoff's loop rules (with total flux equal to zero) to determine the quantum numbers on each index. All of this is automatically handled in the quantum number tensor implementation in TENPACK for abelian quantum numbers. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{For example, consider the Hamiltonian for two spin-half objects on two different sites
+}\begin{displaymath}
+\DIFdel{\mathbf{S}_1\cdot\mathbf{S}_2=\frac{1}{4}\left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & -1 & 2 & 0\\
+0 & 2 & -1 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}\right)
+}\end{displaymath}%DIFAUXCMD
+\DIFdel{where $\mathbf{S}=\boldsymbol{\sigma}/2$ for the Pauli vector $\boldsymbol{\sigma}$ \mbox{%DIFAUXCMD
+\cite{townsend2000modern} }\hskip0pt%DIFAUXCMD
+and subscripts denote which site the spin vector is located. The matrix can be divided into three blocks, and in general, we can write a block structure of completely independent pieces as
+}\begin{displaymath}
+\DIFdel{\mathbf{S}_1\cdot\mathbf{S}_2=1\oplus\left(\begin{array}{cc}
+-1 & 2 \\
+2 & -1
+\end{array}\right)\oplus1
+}\end{displaymath}%DIFAUXCMD
+\DIFdel{where $\oplus$ is a direct sum. Each of these three independent pieces can be assigned a quantum number (+1, 0, -1; in order). This means that if we were to multiply this matrix with another matrix respecting the same symmetries, we could break the full matrix multiplication into parts. In this case, consider multiplying $\mathbf{S}_1\cdot\mathbf{S}_2$ by itself and noting that one could perform three matrix multiplications, one on each quantum number sector, and obtain the same result.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{This idea generalizes to all tensors that respect a quantum number symmetry. When reshaping an index, one can simply sum the abelian quantum numbers together to find the quantum number on the resulting grouped index. Eventually, one will need to contract a tensor. By identifying which indices are contracted and which are not, one can reshape any tensor into a matrix that must be divisible into quantum number blocks.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The implementation in TENPACK has been optimized so that it is fast. This methodology also avoids any issue with numerical round-off error accidentally changing the desired quantum number sector for a given problem. For example, not imposing quantum number symmetries for fermions can lead to a loss or gaining a fermion, which may resulting in finding an answer for a different symmetry sector than was originally intended. It is recommended to use quantum number symmetries whenever the problem displays quantum numbers.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section{\DIFdel{Builder's guide}}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+\DIFdelend The frontend for the Tensor Network Builder was built using HTML, CSS, JavaScript, and React. It is recommended that the developer has experience in these languages. The majority of the interface is coded in React, and the styling is done in CSS. The React package used is \textbf{ReactFlow}. This specific package was chosen because it is used to create graphs commonly found in computer science, and the package was well documented. Computer science graphs and tensor networks have quite a bit of overlap in their structure. The nodes and edges can easily be generalized to tensors and indices. The website has two main components: the network canvas and the drag and drop menu.
 
 Any functions called using ReactFlow are of the form \textbf{ReactFlow.FunctionName()}. This was due to an issue importing ReactFlow into the Genie environment. It should be noted that all the ReactFlow elements should be inside the $<$\textbf{ReactFlow.ReactFlowProvider}$>$ element as this is the ReactFlow environment. 
 
@@ -347,7 +557,7 @@ Adding new operations requires the frontend to produce an accurate representatio
 When an operation is done, it passes the name of the operation done and the JavaScript objects of the tensors and edges involved.
 
 \subsection{Chosen Conventions}
-The \textbf{invisible} nodes are \textbf{ALWAYS} the target nodes, never the source. Changing this will cause errors in the code.
+\textbf{\DIFdelbegin \DIFdel{invisible}\DIFdelend \DIFaddbegin \DIFadd{Invisible}\DIFaddend } nodes are \textbf{ALWAYS} the target node, never the source. Changing this will cause some errors in the code.
 
 \subsection{Additional Info}
 Multiple elements can be selected by \textbf{holding command+clicking}. React elements must start with a capital letter or errors may occur (this is a convention but it is easy to forget when learning)
