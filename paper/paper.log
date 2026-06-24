@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  24 JUN 2026 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.19)  24 JUN 2026 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,49 +638,49 @@ ub . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
 []\T1/ptm/m/n/9 Eduardo Frad-kin. \T1/ptm/m/it/9 Field the-o-ries of con-densed
  mat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
 \T1/ptm/m/it/9 ter physics\T1/ptm/m/n/9 . Cam-bridge Uni-ver-sity Press, 2013.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--47
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 []\T1/ptm/m/n/9 HR Krishna-Murthy, JW Wilkins, and KG Wil-son.
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 43--47
+Underfull \hbox (badness 2285) in paragraph at lines 44--49
 \T1/ptm/m/n/9 Renormalization-group ap-proach to the an-der-son model
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 43--47
+Underfull \hbox (badness 3849) in paragraph at lines 44--49
 \T1/ptm/m/n/9 of di-lute mag-netic al-loys. i. static prop-er-ties for the
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 43--47
+Underfull \hbox (badness 2653) in paragraph at lines 44--49
 \T1/ptm/m/n/9 sym-met-ric case. \T1/ptm/m/it/9 Phys-i-cal Re-view B\T1/ptm/m/n/
 9 , 21(3):1003, 1980.
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 49--53
+Underfull \hbox (badness 1983) in paragraph at lines 51--56
 []\T1/ptm/m/n/9 Michael Levin and Cody P Nave. Ten-sor renor-mal-iza-
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 49--53
+Underfull \hbox (badness 1286) in paragraph at lines 51--56
 \T1/ptm/m/n/9 tion group ap-proach to two-dimensional clas-si-cal lat-tice
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 49--53
+Underfull \hbox (badness 3009) in paragraph at lines 51--56
 \T1/ptm/m/n/9 mod-els. \T1/ptm/m/it/9 Phys-i-cal Re-view Let-ters\T1/ptm/m/n/9 
 , 99(12):120601, 2007.
  []
@@ -694,17 +694,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [5 <./FIGs//contraction.png>]
-Underfull \hbox (badness 3333) in paragraph at lines 84--88
+Underfull \hbox (badness 3333) in paragraph at lines 88--93
 []\T1/ptm/m/n/9 Frank Ver-straete and J Ig-na-cio Cirac. Ma-trix prod-uct
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--94
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
 []\T1/ptm/m/n/9 Guifre Vi-dal. En-tan-gle-ment renor-mal-iza-tion.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--94
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
 \T1/ptm/m/it/9 Phys-i-cal Re-view Let-ters\T1/ptm/m/n/9 , 99(22):220405, 2007.
  []
 
@@ -779,72 +779,39 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [8
 
 ] (./paper.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `paper.out':
-(rerunfilecheck)             Before: 9DEA5A17D147FAD07E621D37ED9F87A6;4700
-(rerunfilecheck)             After:  1F7C1EAC0AB71606AA64E96E5D24A97E;4687.
+Package rerunfilecheck Info: File `paper.out' has not changed.
+(rerunfilecheck)             Checksum: 9DEA5A17D147FAD07E621D37ED9F87A6;4700.
  ) 
 Here is how much of TeX's memory you used:
- 14705 strings out of 476025
- 225323 string characters out of 5790017
+ 14699 strings out of 476025
+ 225245 string characters out of 5790017
  1875388 words of memory out of 5000000
  34839 multiletter control sequences out of 15000+600000
  556661 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,13n,90p,1221b,1815s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{equation.4.4} has been referenced but does not exis
-t, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
-ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
-exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/l
-ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
-sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/l
-ocal/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/te
-xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 615757 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
+live/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (8 pages, 615672 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
  282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

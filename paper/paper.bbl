@@ -24,7 +24,8 @@ Bundled matrix product states represent low-energy excitations faithfully.
 
 \bibitem{dmrjulia1}
 Thomas~E Baker and Martin~P Thompson.
-Build your own tensor network library: Dmrjulia i. basic library for the density matrix renormalization group.
+Build your own tensor network library: Dmrjulia i. basic library for the
+  density matrix renormalization group.
 {\em ArXiv Preprint}, 2021.
 \href{http://dx.doi.org/10.48550/arXiv.2109.03120}{doi:10.48550/arXiv.2109.03120}.
 
@@ -41,13 +42,15 @@ Kiana Gallagher, Aaron Dayton, and Thomas~E. Baker.
 
 \bibitem{krishna1980renormalization}
 HR~Krishna-Murthy, JW~Wilkins, and KG~Wilson.
-Renormalization-group approach to the anderson model of dilute magnetic alloys. i. static properties for the symmetric case.
+Renormalization-group approach to the anderson model of dilute magnetic alloys.
+  i. static properties for the symmetric case.
 {\em Physical Review B}, 21(3):1003, 1980.
 \href{http://dx.doi.org/10.1103/physrevb.21.1003}{doi:10.1103/physrevb.21.1003}.
 
 \bibitem{levin2007tensor}
 Michael Levin and Cody~P Nave.
-Tensor renormalization group approach to two-dimensional classical lattice models.
+Tensor renormalization group approach to two-dimensional classical lattice
+  models.
 {\em Physical Review Letters}, 99(12):120601, 2007.
 \href{http://dx.doi.org/10.1103/physrevlett.99.120601}{doi:10.1103/physrevlett.99.120601}.
 
@@ -76,14 +79,16 @@ University Science Books (Sausalito, California), 2000.
 
 \bibitem{verstraete2004renormalization}
 Frank Verstraete and J~Ignacio Cirac.
-Renormalization algorithms for quantum-many body systems in two and higher dimensions.
+Renormalization algorithms for quantum-many body systems in two and higher
+  dimensions.
 {\em ArXiv Preprint}, 2004.
 \href{http://dx.doi.org/10.48550/arXiv.cond-mat/0407066}{doi:10.48550/arXiv.cond-mat/0407066}.
 
 \bibitem{verstraete2006matrix}
 Frank Verstraete and J~Ignacio Cirac.
 Matrix product states represent ground states faithfully.
-{\em Physical Review B—Condensed Matter and Materials Physics}, 73(9):094423, 2006.
+{\em Physical Review B—Condensed Matter and Materials Physics}, 73(9):094423,
+  2006.
 \href{http://dx.doi.org/10.1103/physrevb.73.094423}{doi:10.1103/physrevb.73.094423}.
 
 \bibitem{vidal2007entanglement}

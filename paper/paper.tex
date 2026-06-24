@@ -112,7 +112,7 @@ The original hope for Julia was to solve the two-language problem, and that is s
 
 %but some of these developments are not forwarding that goal at least for our purposes. We do not question the implementation in standard Julia functions as this kind of drift towards more specific functions and rewriting some basic functions was bound to happen for a more specific use case. We merely point out that some of these features are different for this library.
 
-\section{Quantum symmetries}
+\subsection{Quantum symmetries}
 \label{qsymmetries}
 
 TENPACK currently supports local $U(1)$ and $\mathbb{Z}_n$ symmetries. The basic idea is to establish the relevant quantum numbers on each physical index (drawn as the vertical index on the MPS). Specifying the quantum numbers on each of the physical indices is sufficient to determine the quantum numbers on all other indices, provided that the total flux of the input Hamiltonian is a net zero ({\it i.e.}, symmetry-preserving Hamiltonian). Given this case, all tensors exhibit a block structure, where each block has a set of non-zero values and no non-zero values are available between quantum number sectors.
