@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {I}ABSTRACT}{1}{section.1}%
+\contentsline {section}{\numberline {II}INTRODUCTION}{1}{section.2}%
+\contentsline {section}{\numberline {III}File structure}{1}{section.3}%
+\contentsline {subsection}{\numberline {A}The \lstinline |tensornetwork| MVC group}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {B}Public}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {C}Routes}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {IV}Deployment}{2}{section.4}%
+\contentsline {subsection}{\numberline {A}Dockerfile}{2}{subsection.4.1}%
+\contentsline {subsection}{\numberline {B}How to deploy}{3}{subsection.4.2}%
